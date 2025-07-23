@@ -1,44 +1,79 @@
-import jawa from "../../assets/domestik/borobudur.jpeg"
-import sumatera from "../../assets/domestik/sumatera.jpeg"
-import balilombok from "../../assets/domestik/balilombok.jpeg"
-import ntt from "../../assets/domestik/ntt.jpeg"
-import kalimantan from "../../assets/domestik/kalimantan.jpeg"
-import sulawesi from "../../assets/domestik/sulawesi.jpeg"
-import asia from "../../assets/internasional/asia.jpg"
-import europe from "../../assets/internasional/europe.webp"
-import africa from "../../assets/internasional/africa.jpg"
-import america from "../../assets/internasional/america.jpeg"
-import australia from "../../assets/internasional/australia.jpg"
-import honeymoon from "../../assets/paket/honeymoon.jpg"
-import studytour from "../../assets/paket/studytour.jpg"
-import adventure from "../../assets/paket/adventure.jpg"
-import RentalJogja from "../../assets/rental/sewa-mobil-jogja.png"
-import RentalSemarang from "../../assets/rental/sewa-mobil-semarang.png"
-import RentalJakarta from "../../assets/rental/sewa-mobil-jakarta.png"
-import RentalBandung from "../../assets/rental/sewa-mobil-bandung.png"
-import RentalBali from "../../assets/rental/sewa-mobil-bali.png"
-import Yogya1 from "../../assets/domestik/jawa/yogya-1.jpg"
-import Yogya2 from "../../assets/domestik/jawa/yogya-2.jpg"
-import Yogya3 from "../../assets/domestik/jawa/yogya-3.jpg"
-import Yogya4 from "../../assets/domestik/jawa/yogya-4.jpg"
-import Yogya5 from "../../assets/domestik/jawa/yogya-5.jpg"
-import Yogya6 from "../../assets/domestik/jawa/yogya-6.jpg"
-import Pacitan from "../../assets/domestik/jawa/pacitan.jpg"
-import Malang1 from "../../assets/domestik/jawa/malang-1.jpg"
-import Malang2 from "../../assets/domestik/jawa/malang-2.jpg"
-import KarimunJawa from "../../assets/domestik/jawa/karimun-jawa.jpg"
-import Banyuwangi from "../../assets/domestik/jawa/banyuwangi.jpg"
-import Bandung from "../../assets/domestik/jawa/bandung.jpg"
-import Yogya1DetailTrip1 from "../../assets/domestik/jawa/yogya1-detail1.jpg"
-import Yogya1DetailTrip2 from "../../assets/domestik/jawa/yogya1-detail2.png"
-import Yogya1DetailTrip3 from "../../assets/domestik/jawa/yogya1-detail3.png" 
+import jawa from "../../assets/domestik/borobudur.jpeg";
+import sumatera from "../../assets/domestik/sumatera.jpeg";
+import balilombok from "../../assets/domestik/balilombok.jpeg";
+import ntt from "../../assets/domestik/ntt.jpeg";
+import kalimantan from "../../assets/domestik/kalimantan.jpeg";
+import sulawesi from "../../assets/domestik/sulawesi.jpeg";
+import asia from "../../assets/internasional/asia.jpg";
+import europe from "../../assets/internasional/europe.webp";
+import africa from "../../assets/internasional/africa.jpg";
+import america from "../../assets/internasional/america.jpeg";
+import australia from "../../assets/internasional/australia.jpg";
+import honeymoon from "../../assets/paket/honeymoon.jpg";
+import studytour from "../../assets/paket/studytour.jpg";
+import adventure from "../../assets/paket/adventure.jpg";
+import RentalJogja from "../../assets/rental/sewa-mobil-jogja.png";
+import RentalSemarang from "../../assets/rental/sewa-mobil-semarang.png";
+import RentalJakarta from "../../assets/rental/sewa-mobil-jakarta.png";
+import RentalBandung from "../../assets/rental/sewa-mobil-bandung.png";
+import RentalBali from "../../assets/rental/sewa-mobil-bali.png";
+import Yogya1 from "../../assets/domestik/jawa/yogya-1.jpg";
+import Yogya1DetailTrip1 from "../../assets/domestik/jawa/yogya1-detail1.jpg";
+import Yogya1DetailTrip2 from "../../assets/domestik/jawa/yogya1-detail2.png";
+import Yogya1DetailTrip3 from "../../assets/domestik/jawa/yogya1-detail3.png";
+import Yogya2 from "../../assets/domestik/jawa/yogya-2.jpg";
+import Yogya3 from "../../assets/domestik/jawa/yogya-3.jpg";
+import Yogya4 from "../../assets/domestik/jawa/yogya-4.jpg";
+import Yogya5 from "../../assets/domestik/jawa/yogya-5.jpg";
+import Yogya6 from "../../assets/domestik/jawa/yogya-6.jpg";
+import Pacitan from "../../assets/domestik/jawa/pacitan.jpg";
+import Malang1 from "../../assets/domestik/jawa/malang-1.jpg";
+import Malang2 from "../../assets/domestik/jawa/malang-2.jpg";
+import KarimunJawa from "../../assets/domestik/jawa/karimun-jawa.jpg";
+import Banyuwangi from "../../assets/domestik/jawa/banyuwangi.jpg";
+import Bandung from "../../assets/domestik/jawa/bandung.jpg";
+import Belitung1 from "../../assets/domestik/sumatra/belitung1.jpg";
+import Belitung2 from "../../assets/domestik/sumatra/belitung2.jpg";
+import Belitung3 from "../../assets/domestik/sumatra/belitung3.jpg";
+import Belitung4 from "../../assets/domestik/sumatra/belitung4.jpg";
+import BelitungDetailTrip1 from "../../assets/domestik/sumatra/belitung1-detail1.jpg";
+import BelitungDetailTrip2 from "../../assets/domestik/sumatra/belitung1-detail2.jpg";
+import BelitungDetailTrip3 from "../../assets/domestik/sumatra/belitung1-detail3.jpg";
+import BelitungDetailTrip4 from "../../assets/domestik/sumatra/belitung1-detail4.jpg";
+import BelitungDetailTrip5 from "../../assets/domestik/sumatra/belitung1-detail5.jpg";
+import BelitungDetailTrip6 from "../../assets/domestik/sumatra/belitung1-detail6.jpg";
+import Lombok1 from "../../assets/domestik/lombok/lombok1.jpg";
+import LombokDetailTrip1 from "../../assets/domestik/lombok/lombok1-detail1.jpg";
+import LombokDetailTrip2 from "../../assets/domestik/lombok/lombok1-detail2.jpg";
+import LombokDetailTrip3 from "../../assets/domestik/lombok/lombok1-detail3.jpg";
+import LombokDetailTrip4 from "../../assets/domestik/lombok/lombok1-detail4.jpg";
+import LombokDetailTrip5 from "../../assets/domestik/lombok/lombok1-detail5.jpg";
+import Lombok2 from "../../assets/domestik/lombok/lombok2.jpg";
+import Bali1 from "../../assets/domestik/lombok/bali1.jpg";
+import Bali2 from "../../assets/domestik/lombok/bali2.jpg";
+import Ntt1 from "../../assets/domestik/ntt/ntt1.jpg";
+import NttDetailTrip1 from "../../assets/domestik/ntt/ntt1-detail1.jpg";
+import NttDetailTrip2 from "../../assets/domestik/ntt/ntt1-detail2.jpg";
+import NttDetailTrip3 from "../../assets/domestik/ntt/ntt1-detail3.jpg";
+import NttDetailTrip4 from "../../assets/domestik/ntt/ntt1-detail4.jpg";
+import NttDetailTrip5 from "../../assets/domestik/ntt/ntt1-detail5.jpg";
+import Ntt3 from "../../assets/domestik/ntt/ntt3.jpg";
+import Sulawesi1 from "../../assets/domestik/sulawesi/sulawesi1.jpg";
+import SulawesiDetailTrip1 from "../../assets/domestik/sulawesi/sulawesi1-detail1.jpg";
+import SulawesiDetailTrip2 from "../../assets/domestik/sulawesi/sulawesi1-detail2.jpg";
+import SulawesiDetailTrip3 from "../../assets/domestik/sulawesi/sulawesi1-detail3.jpg";
+import SulawesiDetailTrip4 from "../../assets/domestik/sulawesi/sulawesi1-detail4.jpg";
+import SulawesiDetailTrip5 from "../../assets/domestik/sulawesi/sulawesi1-detail5.jpg";
+import Sulawesi2 from "../../assets/domestik/sulawesi/sulawesi2.jpg";
+import Sulawesi3 from "../../assets/domestik/sulawesi/sulawesi3.jpg";
 
 export const trips = {
     domestik: {
         jawa: {
             id: 1,
             image: jawa,
-            description: "Rasakan pengalaman tak terlupakan di Jawa, pulau dengan warisan budaya terkaya di Indonesia, lengkap dengan kuliner lezat, seni tradisional yang memesona, dan keramahan penduduk lokal yang hangat",
+            description:
+                "Rasakan pengalaman tak terlupakan di Jawa, pulau dengan warisan budaya terkaya di Indonesia, lengkap dengan kuliner lezat, seni tradisional yang memesona, dan keramahan penduduk lokal yang hangat",
             trips: [
                 {
                     id: 1,
@@ -48,7 +83,7 @@ export const trips = {
                         Yogya1,
                         Yogya1DetailTrip1,
                         Yogya1DetailTrip2,
-                        Yogya1DetailTrip3
+                        Yogya1DetailTrip3,
                     ],
                     topTitle: "3 Day Tour",
                     slug: "Jogja Adventure + Cycling",
@@ -56,110 +91,110 @@ export const trips = {
                     tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
                     priceperday: "IDR.424K/1 day",
                     pricetrip: "1.511.000",
-                    ringkasan: "Jogjakarta sangat dikenal dengan budaya yang masih begitu kental dan memiliki banyak sekali obyek wisata yang menjadikan daya tarik wisata baik kunjungan wisatawan mancanegara maupun wisatawan domestik. Jogjakarta memiliki obyek wisata mulai dari budaya, edukasi, alam, sampai tempat-tempat yang instagramable. Sisi lain dari kota Jogjakarta yang terkenal dengan obyek-obyek wisatanya Jogjakarta juga menyuguhkan berbagai makanan tradional dan kerajinan tradisional.",
+                    ringkasan:
+                        "Jogjakarta sangat dikenal dengan budaya yang masih begitu kental dan memiliki banyak sekali obyek wisata yang menjadikan daya tarik wisata baik kunjungan wisatawan mancanegara maupun wisatawan domestik. Jogjakarta memiliki obyek wisata mulai dari budaya, edukasi, alam, sampai tempat-tempat yang instagramable. Sisi lain dari kota Jogjakarta yang terkenal dengan obyek-obyek wisatanya Jogjakarta juga menyuguhkan berbagai makanan tradional dan kerajinan tradisional.",
                     include: [
                         "Transportasi AC Privat",
                         "2X Makan Siang",
                         "Tiket Obyek Wisata",
                         "Tour Guide + Driver",
-                        "Asuransi"
+                        "Asuransi",
                     ],
                     exclude: [
                         "Tiket Pesawat",
                         "Akomodasi Hotel",
                         "Tipping Guide",
                         "Tour Tambahan",
-                        "Pengeluaran Pribadi"
+                        "Pengeluaran Pribadi",
                     ],
-                    itenary: [{
-                        day1: [{
-                            destination: "Gua Pindul - Ngobaran - Heha Ocean View",
-                            description: "Pagi hari peserta dijemput di meeting point (Hotel/Stasiun/Bandara). Menuju ke Gunung Kidul terletak di selatan Yogyakarta. Cave tubing menyusuri gua alam di Gua Pindul. Makan siang di lokal restaurant. setelah itu menuju Pantai Ngobaran Balinya Jogja. Menikmati pemandangan laut lepas di tepi tebing yang indah dengan spot foto instagramble di Heha Ocean View."
-                        }],
-                        day2: [{
-                            destination: "Cycling - Svargabumi - Borobudur",
-                            description: "Pagi ini Cycling dengan rute yang menyusuri pegunungan Menoreh dengan pemandangan yang sangat indah. Makan siang dengan suasana pedesaan. Selanjutnya Mengunjungi Svargabumi wisata tengah sawah dengan spot instagramable. Mengunjungi candi Borobudur kuil Buddha terbesar yang menjadi situs warisan dunia UNESCO."
-                        }],
-                        day3: [{
-                            destination: "Lava Tour - Malioboro",
-                            description: "Pagi ini menuju Kaliurang di kaki gunung Merapi. Menikmati Lava Tour menyusuri aliran lava di lereng merapi dengan jeep (denan biaya sendiri / optional tour). Mengunjungi The Lost World Castle bangunan konsep kastil seperti di Eropa. Makan siang di lokal restaurant. Menikmati keindahan sunset dan view kota dari ketinggian di Heha Sky View. berbelanja oleh-oleh khas di Yogya di Malioboro. Diantar kembali ke meeting point (hotel/stasiun/bandara) Tour selesai dan Terimakasih"
-                        }],
-
-                    }]
-
+                    itenary: [
+                        {
+                            day1: [
+                                {
+                                    destination: "Gua Pindul - Ngobaran - Heha Ocean View",
+                                    description:
+                                        "Pagi hari peserta dijemput di meeting point (Hotel/Stasiun/Bandara). Menuju ke Gunung Kidul terletak di selatan Yogyakarta. Cave tubing menyusuri gua alam di Gua Pindul. Makan siang di lokal restaurant. setelah itu menuju Pantai Ngobaran Balinya Jogja. Menikmati pemandangan laut lepas di tepi tebing yang indah dengan spot foto instagramble di Heha Ocean View.",
+                                },
+                            ],
+                            day2: [
+                                {
+                                    destination: "Cycling - Svargabumi - Borobudur",
+                                    description:
+                                        "Pagi ini Cycling dengan rute yang menyusuri pegunungan Menoreh dengan pemandangan yang sangat indah. Makan siang dengan suasana pedesaan. Selanjutnya Mengunjungi Svargabumi wisata tengah sawah dengan spot instagramable. Mengunjungi candi Borobudur kuil Buddha terbesar yang menjadi situs warisan dunia UNESCO.",
+                                },
+                            ],
+                            day3: [
+                                {
+                                    destination: "Lava Tour - Malioboro",
+                                    description:
+                                        "Pagi ini menuju Kaliurang di kaki gunung Merapi. Menikmati Lava Tour menyusuri aliran lava di lereng merapi dengan jeep (denan biaya sendiri / optional tour). Mengunjungi The Lost World Castle bangunan konsep kastil seperti di Eropa. Makan siang di lokal restaurant. Menikmati keindahan sunset dan view kota dari ketinggian di Heha Sky View. berbelanja oleh-oleh khas di Yogya di Malioboro. Diantar kembali ke meeting point (hotel/stasiun/bandara) Tour selesai dan Terimakasih",
+                                },
+                            ],
+                        },
+                    ],
+                    syaratkondisi: [
+                        "Keberangkatan group minimal harus 2 orang",
+                        "Biaya tour setiap satu orang dalam IDR dapat berubah sewaktu-waktu yang diakibatkan karena kurangnya peserta dari jumlah minimum, perubahan harga dari airlines, hotel, bus, dan lain-lain",
+                        "Jadwal tour dapat berubah sewaktu-waktu  mengikuti kondisi yang memungkinkan tanpa mengurangi isi dalam acara tour tersebut.",
+                        "Reservasi hotel, transportasi dan lain-lain di pesankan berdasarkan ketersediaan tempat, setelah kami mendapatkan konfirmasi dari mitra tersebut.",
+                        "Apabila terjadi kondisi Force Majeur/Kondisi diluar kendali seperti (Bencana Alam, Pemogokan, Kehilangan, Kerusakan, Keterlambatan, sarana angkutan/ Transportasi dan lain-lain) yang dapat mempengaruhi rencana tour, maka akan bersifat Non Refundable (Tidak ada Pengembalian). dan biaya tour tidak termasuk pengeluaran tambahan yang disebabkan oleh Force Majeur.",
+                        "Bagi Peserta yang mendapati kamar triple (1 kamar ditempati 3 orang) kami tidak menjamin akan mendapatkan 3 tempat tidur yang terpisah, mengingat tempat tidur yang didapat tergantung kondisi hotel yang ada.",
+                    ],
                 },
                 {
                     id: 2,
                     name: "Yogyakarta",
                     type: "Instagramable",
-                    images: [
-                        Yogya2
-                    ],
+                    images: [Yogya2],
                     tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
                     priceperday: "IDR.876K/2 day",
-
                 },
                 {
                     id: 3,
                     name: "Yogyakarta",
                     type: "Adventure",
-                    images: [
-                        Yogya3
-                    ],
+                    images: [Yogya3],
                     tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
                     priceperday: "IDR.1.511K/3 days",
-
                 },
                 {
                     id: 4,
                     name: "Yogyakarta",
                     type: "Fun",
-                    images: [
-                        Yogya4
-                    ],
+                    images: [Yogya4],
                     tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
                     priceperday: "IDR.476K/1 day",
-
                 },
                 {
                     id: 5,
                     name: "Yogyakarta",
                     type: "Enjoy",
-                    images: [
-                        Yogya5
-                    ],
+                    images: [Yogya5],
                     tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
                     priceperday: "IDR.931K/2 day",
-
                 },
                 {
                     id: 6,
                     name: "Yogyakarta",
                     type: "Natural",
-                    images: [
-                        Yogya6
-                    ],
+                    images: [Yogya6],
                     tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
                     priceperday: "IDR.435K/1 day",
-
                 },
                 {
                     id: 7,
                     name: "Pacitan",
                     type: "Explore",
-                    images: [
-                        Pacitan
-                    ],
-                    tripDestination: "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
+                    images: [Pacitan],
+                    tripDestination:
+                        "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
                     priceperday: "Call for Price/2 days",
                 },
                 {
                     id: 8,
                     name: "Malang",
                     type: "Enjoy",
-                    images: [
-                        Malang1
-                    ],
+                    images: [Malang1],
                     tripDestination: "Museum Angkut - BNS - Jatim Park 2 - Kawah Bromo",
                     priceperday: "Call for Price/2 days",
                 },
@@ -167,29 +202,25 @@ export const trips = {
                     id: 9,
                     name: "Malang",
                     type: "Natural",
-                    images: [
-                        Malang2
-                    ],
-                    tripDestination: "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
+                    images: [Malang2],
+                    tripDestination:
+                        "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
                     priceperday: "Call for Price/3 days",
                 },
                 {
                     id: 10,
                     name: "Karimun Jawa",
                     type: "Explore",
-                    images: [
-                        KarimunJawa
-                    ],
-                    tripDestination: "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
+                    images: [KarimunJawa],
+                    tripDestination:
+                        "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
                     priceperday: "Call for Price/2 days",
                 },
                 {
                     id: 11,
                     name: "Banyuwangi",
                     type: "Enjoy",
-                    images: [
-                        Banyuwangi
-                    ],
+                    images: [Banyuwangi],
                     tripDestination: "Museum Angkut - BNS - Jatim Park 2 - Kawah Bromo",
                     priceperday: "Call for Price/2 days",
                 },
@@ -197,155 +228,618 @@ export const trips = {
                     id: 12,
                     name: "Bandung",
                     type: "Natural",
-                    images: [
-                        Bandung
-                    ],
-                    tripDestination: "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
+                    images: [Bandung],
+                    tripDestination:
+                        "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
                     priceperday: "Call for Price/3 days",
-                }
-            ]
+                },
+            ],
         },
         sumatera: {
             id: 2,
             image: sumatera,
-            description: "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
+            description:
+                "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
             trips: [
                 {
-
-                }
-            ]
-        },
-        balilombok: {
-            id: 3,
-            image: balilombok,
-            description: "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
-            trips: [
+                    id: 1,
+                    name: "Belitung",
+                    type: "Relax",
+                    images: [
+                        Belitung1,
+                        BelitungDetailTrip1,
+                        BelitungDetailTrip2,
+                        BelitungDetailTrip3,
+                        BelitungDetailTrip4,
+                        BelitungDetailTrip5,
+                        BelitungDetailTrip6,
+                    ],
+                    topTitle: "3 Day Tour",
+                    slug: "3D Belitung Sweet Escape",
+                    duration: "3 Hari 2 Malam",
+                    tripDestination:
+                        "Vihara Dewi Kwan in - Pulau Lengkuas - Pulau Kepayang - Danau Kaolin",
+                    priceperday: "IDR 1.424K/Day",
+                    pricetrip: "1.424.000",
+                    ringkasan:
+                        "Belitung memiliki keindahan alam bahari yang dijuluki “Maldives”-nya Indonesia atau Maladewa-nya Indonesia. Menurutnya, alasan orang menyebut Belitung sebagai Maladewa-nya Indonesia dikarenakan daerah sekitar utara Belitung terdapat gugusan pulau-pulau kecil yang memiliki daya tarik tersendiri.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                    itenary: [
+                        {
+                            day1: [
+                                {
+                                    destination: "Tanjung Pandan - Manggar - Gantong",
+                                    description:
+                                        "Tiba di Tanjung Pandan, kemudian Anda langsung diajak menuju ke kabupaten Belitung timur mengunjungi Vihara Dewi Kwan Im vihara tertua yang ada di Belitung, mengunjungi Pantai Burung Mandi. Siang hari menuju Manggar kota 1001 kedai kopi dan Anda dapat mencicipi kopi lokal khas kota manggar (exclude). Sore hari di lanjutkan ke Gantong dan mengunjungi Museum kata andrea hirata pengarang buku laskar pelangi dan mengunjungi kampung ahok.",
+                                },
+                            ],
+                            day2: [
+                                {
+                                    destination: "Fullday Island Hopping",
+                                    description:
+                                        "Hari ini Anda diajak island hopping dari Pantai Tanjung Kelayang dengan photo stop di Pulau Batu Garuda, mengunjungi Pulau Lengkuas untuk menikmati pemandangan dari mercusuar dan snorkeling, lalu ke Pulau Pasir, Pulau Batu Belayar (jika air surut), Pulau Kelayang, serta Goa Kelayang. Perjalanan dilanjutkan ke Pantai Tanjung Tinggi, lokasi syuting Laskar Pelangi, dan ditutup dengan belanja di Tanjung Pandan.",
+                                },
+                            ],
+                            day3: [
+                                {
+                                    destination: "Departure Tanjung Pandan",
+                                    description:
+                                        "Pagi ini Anda menuju ke Museum Tanjung Pandan untuk melihat sejarah dari pulau Belitung kemudian menikmati mie khas belitung (include), photo stop di Rumah Adat Belitung dan Danau Kaolin. Kemudian menuju bandara untuk penerbangan kembali ke kota tujuan. Dengan demikian berakhirlah tour Anda. Terima kasih atas kepercayaan dan kesempatan melayani Anda dan sampai jumpa pada acara tour lainnya. Home sweet home ",
+                                },
+                            ],
+                        },
+                    ],
+                    syaratkondisi: [
+                        "Keberangkatan group minimal harus 2 orang",
+                        "Biaya tour setiap satu orang dalam IDR dapat berubah sewaktu-waktu yang diakibatkan karena kurangnya peserta dari jumlah minimum, perubahan harga dari airlines, hotel, bus, dan lain-lain",
+                        "Jadwal tour dapat berubah sewaktu-waktu  mengikuti kondisi yang memungkinkan tanpa mengurangi isi dalam acara tour tersebut.",
+                        "Reservasi hotel, transportasi dan lain-lain di pesankan berdasarkan ketersediaan tempat, setelah kami mendapatkan konfirmasi dari mitra tersebut.",
+                        "Apabila terjadi kondisi Force Majeur/Kondisi diluar kendali seperti (Bencana Alam, Pemogokan, Kehilangan, Kerusakan, Keterlambatan, sarana angkutan/ Transportasi dan lain-lain) yang dapat mempengaruhi rencana tour, maka akan bersifat Non Refundable (Tidak ada Pengembalian). dan biaya tour tidak termasuk pengeluaran tambahan yang disebabkan oleh Force Majeur.",
+                        "Bagi Peserta yang mendapati kamar triple (1 kamar ditempati 3 orang) kami tidak menjamin akan mendapatkan 3 tempat tidur yang terpisah, mengingat tempat tidur yang didapat tergantung kondisi hotel yang ada.",
+                    ],
+                },
                 {
-
-                }
-            ]
-        },
-        ntt: {
-            id: 4,
-            image: ntt,
-            description: "Temukan surga tersembunyi di ujung timur Indonesia - Nusa Tenggara Timur menanti dengan pantai pink Komodo, danau tiga warna Kelimutu, dan petualangan bertemu naga purba di habitat aslinya",
-            trips: [
+                    id: 2,
+                    name: "Belitung",
+                    type: "Explore",
+                    priceperday: "IDR 2.876K/4 Days",
+                    pricetrip: "2.876.000",
+                    images: [
+                        Belitung2
+                    ],
+                    tripDestination:
+                        "Vihara Dewi Kwan in - Pulau Lengkuas - Pulau Kepayang - Danau Kaolin",
+                },
                 {
-
-                }
-            ]
-        },
-        kalimantan: {
-            id: 5,
-            image: kalimantan,
-            description: "Bersiaplah terpesona dengan keindahan Raja Ampat-nya Kalimantan di Kepulauan Derawan, tempat penyu dan pari manta menari bebas di perairan kristal.",
-            trips: [
+                    id: 3,
+                    name: "Padang",
+                    type: "Explore",
+                    priceperday: "IDR 424/Day",
+                    pricetrip: "2.876.000",
+                    images: [
+                        Belitung3
+                    ],
+                    tripDestination:
+                        "mandeh - jembatan siti nurbaya - pantai padang – lembah anai – jam gadang",
+                },
                 {
-
-                }
-            ]
+                    id: 4,
+                    name: "Padang",
+                    type: "Explore",
+                    priceperday: "IDR 876K/2 Days",
+                    pricetrip: "2.876.000",
+                    images: [
+                        Belitung4
+                    ],
+                    tripDestination:
+                        "jembatan siti nurbaya – pantai padang – lembah anai – jam gadang – Sungai Maron",
+                },
+            ],
         },
         sulawesi: {
-            id: 6,
+            id: 3,
             image: sulawesi,
-            description: "Sulawesi menanti petualangan Anda dengan budaya unik Toraja, diving spektakuler di Bunaken, dan keindahan alam yang belum terjamah di setiap sudutnya",
+            description:
+                "Sulawesi menanti petualangan Anda dengan budaya unik Toraja, diving spektakuler di Bunaken, dan keindahan alam yang belum terjamah di setiap sudutnya",
             trips: [
                 {
-
-                }
-            ]
-        }
+                    id: 1,
+                    name: "Sulawesi",
+                    type: "Experience",
+                    images: [
+                        Sulawesi1,
+                        SulawesiDetailTrip1,
+                        SulawesiDetailTrip2,
+                        SulawesiDetailTrip3,
+                        SulawesiDetailTrip4,
+                        SulawesiDetailTrip5,
+                    ],
+                    topTitle: "3 Day Tour",
+                    slug: "3D Explore Labuan Bajo Komodo",
+                    duration: "3 Hari 2 Malam",
+                    tripDestination:
+                        "Pulau padar - Pink Beach - Taka Makasar - Komodo - Manta Point",
+                    priceperday: "IDR 2.124K/Day",
+                    pricetrip: "2.124.000",
+                    ringkasan:
+                        "Labuan Bajo ada apa sih kok digemari wisatawan ? Labuan Bajo ini digemari karena keindahan alamnya yang natural, dari sisi pulaunya, pantainya sampai keindahan laut yang beragam,” Tak habis pada segi keindahan alamnya saja, Labuan Bajo juga mampu menarik wisatawan dari segi budayanya dan kearifan lokal warga setempat.warga setempat dapat memadukan keindahan alam beserta budaya daerahnya untuk dijadikan daya tarik wisata.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                    itenary: [
+                        {
+                            day1: [
+                                {
+                                    destination: "TANJUNGPANDAN - MANGGAR - GANTONG",
+                                    description:
+                                        "Tiba di Tanjung Pandan, kemudian Anda langsung diajak menuju ke kabupaten Belitung timur mengunjungi Vihara Dewi Kwan Im vihara tertua yang ada di Belitung, mengunjungi Pantai Burung Mandi. Siang hari menuju Manggar kota 1001 kedai kopi dan Anda dapat mencicipi kopi lokal khas kota manggar (exclude). Sore hari di lanjutkan ke Gantong dan mengunjungi Museum kata andrea hirata pengarang buku laskar pelangi dan mengunjungi kampung ahok.",
+                                },
+                            ],
+                            day2: [
+                                {
+                                    destination: "FULLDAY ISLAND HOPPING",
+                                    description:
+                                        "Hari ini Anda diajak island hopping dari Pantai Tanjung Kelayang dengan photo stop di Pulau Batu Garuda, mengunjungi Pulau Lengkuas untuk menikmati pemandangan dari mercusuar dan snorkeling, lalu ke Pulau Pasir, Pulau Batu Belayar (jika air surut), Pulau Kelayang, serta Goa Kelayang. Perjalanan dilanjutkan ke Pantai Tanjung Tinggi, lokasi syuting Laskar Pelangi, dan ditutup dengan belanja di Tanjung Pandan.",
+                                },
+                            ],
+                            day3: [
+                                {
+                                    destination: "DEPARTURE TANJUNG PANDAN",
+                                    description:
+                                        "Pagi ini Anda menuju ke Museum Tanjung Pandan untuk melihat sejarah dari pulau Belitung kemudian menikmati mie khas belitung (include), photo stop di Rumah Adat Belitung dan Danau Kaolin. Kemudian menuju bandara untuk penerbangan kembali ke kota tujuan. Dengan demikian berakhirlah tour Anda. Terima kasih atas kepercayaan dan kesempatan melayani Anda dan sampai jumpa pada acara tour lainnya. Home sweet home ",
+                                },
+                            ],
+                        },
+                    ],
+                    syaratkondisi: [
+                        "Keberangkatan group minimal harus 2 orang",
+                        "Biaya tour setiap satu orang dalam IDR dapat berubah sewaktu-waktu yang diakibatkan karena kurangnya peserta dari jumlah minimum, perubahan harga dari airlines, hotel, bus, dan lain-lain",
+                        "Jadwal tour dapat berubah sewaktu-waktu  mengikuti kondisi yang memungkinkan tanpa mengurangi isi dalam acara tour tersebut.",
+                        "Reservasi hotel, transportasi dan lain-lain di pesankan berdasarkan ketersediaan tempat, setelah kami mendapatkan konfirmasi dari mitra tersebut.",
+                        "Apabila terjadi kondisi Force Majeur/Kondisi diluar kendali seperti (Bencana Alam, Pemogokan, Kehilangan, Kerusakan, Keterlambatan, sarana angkutan/ Transportasi dan lain-lain) yang dapat mempengaruhi rencana tour, maka akan bersifat Non Refundable (Tidak ada Pengembalian). dan biaya tour tidak termasuk pengeluaran tambahan yang disebabkan oleh Force Majeur.",
+                        "Bagi Peserta yang mendapati kamar triple (1 kamar ditempati 3 orang) kami tidak menjamin akan mendapatkan 3 tempat tidur yang terpisah, mengingat tempat tidur yang didapat tergantung kondisi hotel yang ada.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "Sulawesi",
+                    type: "Experience",
+                    priceperday: "IDR 424K/Day",
+                    pricetrip: "2.124.000",
+                    images: [
+                        Sulawesi2
+                    ],
+                    tripDestination:
+                        "Derawan – sangalaki – kakaban – maratua – gusung sanggalau",
+                },
+                {
+                    id: 3,
+                    name: "Sulawesi",
+                    type: "Adventure",
+                    priceperday: "IDR 876K/2 Days",
+                    pricetrip: "1.511.000",
+                    images: [
+                        Sulawesi3
+                    ],
+                    tripDestination:
+                        "Tugu khatulistiwa – vihara dharma bumi raya – desa sakok",
+                },
+            ],
+        },
+        bali: {
+            id: 4,
+            image: balilombok,
+            description:
+                "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
+            trips: [
+                {
+                    id: 1,
+                    name: "Lombok",
+                    type: "Amazing",
+                    images: [
+                        Lombok1,
+                        LombokDetailTrip1,
+                        LombokDetailTrip2,
+                        LombokDetailTrip3,
+                        LombokDetailTrip4,
+                        LombokDetailTrip5,
+                    ],
+                    topTitle: "3 Day Tour",
+                    slug: "3D Lombok Amazing",
+                    duration: "3 Hari 2 Malam",
+                    tripDestination:
+                        "Desa sasak - Tanjung Aan - Gili Trawangan - Bukit Malimbu",
+                    priceperday: "IDR 424K/Day",
+                    pricetrip: "1.585.000",
+                    ringkasan:
+                        "Labuan Bajo ada apa sih kok digemari wisatawan ? Labuan Bajo ini digemari karena keindahan alamnya yang natural, dari sisi pulaunya, pantainya sampai keindahan laut yang beragam,” Tak habis pada segi keindahan alamnya saja, Labuan Bajo juga mampu menarik wisatawan dari segi budayanya dan kearifan lokal warga setempat.warga setempat dapat memadukan keindahan alam beserta budaya daerahnya untuk dijadikan daya tarik wisata.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                    itenary: [
+                        {
+                            day1: [
+                                {
+                                    destination: "Tiba di Lombok - sasak - pantai kuta",
+                                    description:
+                                        "Tiba di Lombok Anda dijemput guide kami dan langsung menuju Desa Sade tradisional lombok, yang dimana penduduknya sangat mempertahankan adat istiadat leluhur. Siang hari mengunjungi Pantai Mawun, Pantai Selong Belanak dan Pantai Kuta sangat terkenal dengan keindahan nya dan keunikan pasirnya. Sore hari mengunjungi Desa Sukarara desa tempat pengrajin kain tenun ikat khas lombok dan Desa Banyumulek pusat kerajinan gerabah di pulau Lombok.",
+                                },
+                            ],
+                            day2: [
+                                {
+                                    destination: "Gili Trawangan - Malimbu",
+                                    description:
+                                        "Pagi ini Anda menuju pelabuhan Nare dengan boat Anda menuju Gili Trawangan, Gili Air, Gili Meno dimana Anda dapat menikmati keindahan dan snorkeling, diving, bersepeda dan lainya. Sore hari menuju Bukit Malimbu untuk menikmati matahari terbenam dengan latar belakang 3 gili.",
+                                },
+                            ],
+                            day3: [
+                                {
+                                    destination: "Departure Lombok",
+                                    description:
+                                        "Hari ini Anda diantar menuju bandara untuk penerbangan kembali ke kota tujuan. Dengan demikian berakhirlah tour anda. Terima kasih atas kepercayaan dan kesempatan melayani anda dan sampai jumpa pada acara tour lainnya. home sweet home.",
+                                },
+                            ],
+                        },
+                    ],
+                    syaratkondisi: [
+                        "Keberangkatan group minimal harus 2 orang",
+                        "Biaya tour setiap satu orang dalam IDR dapat berubah sewaktu-waktu yang diakibatkan karena kurangnya peserta dari jumlah minimum, perubahan harga dari airlines, hotel, bus, dan lain-lain",
+                        "Jadwal tour dapat berubah sewaktu-waktu  mengikuti kondisi yang memungkinkan tanpa mengurangi isi dalam acara tour tersebut.",
+                        "Reservasi hotel, transportasi dan lain-lain di pesankan berdasarkan ketersediaan tempat, setelah kami mendapatkan konfirmasi dari mitra tersebut.",
+                        "Apabila terjadi kondisi Force Majeur/Kondisi diluar kendali seperti (Bencana Alam, Pemogokan, Kehilangan, Kerusakan, Keterlambatan, sarana angkutan/ Transportasi dan lain-lain) yang dapat mempengaruhi rencana tour, maka akan bersifat Non Refundable (Tidak ada Pengembalian). dan biaya tour tidak termasuk pengeluaran tambahan yang disebabkan oleh Force Majeur.",
+                        "Bagi Peserta yang mendapati kamar triple (1 kamar ditempati 3 orang) kami tidak menjamin akan mendapatkan 3 tempat tidur yang terpisah, mengingat tempat tidur yang didapat tergantung kondisi hotel yang ada.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "Lombok",
+                    type: "Fantastic",
+                    priceperday: "IDR 424K/Day",
+                    pricetrip: "2.876.000",
+                    images: [
+                        Lombok2
+                    ],
+                    tripDestination:
+                        "Desa Sasak - Gili Nangu - Pink Beach",
+                },
+                {
+                    id: 3,
+                    name: "Bali",
+                    type: "Exotic",
+                    priceperday: "IDR 876K/2 Days",
+                    pricetrip: "2.876.000",
+                    images: [
+                        Bali1
+                    ],
+                    tripDestination:
+                        "Kintamani – Tirta Empul – Taman Ayun – Bedugul – Tanah Lot",
+                },
+                {
+                    id: 4,
+                    name: "Bali",
+                    type: "Experience",
+                    priceperday: "IDR 424K/Day",
+                    pricetrip: "2.876.000",
+                    images: [
+                        Bali2
+                    ],
+                    tripDestination:
+                        "Jimbaran – Tanjung Benoa – GWK – Tanah Lot",
+                },
+            ],
+        },
+        ntt: {
+            id: 5,
+            image: ntt,
+            description:
+                "Temukan surga tersembunyi di ujung timur Indonesia - Nusa Tenggara Timur menanti dengan pantai pink Komodo, danau tiga warna Kelimutu, dan petualangan bertemu naga purba di habitat aslinya",
+            trips: [
+                {
+                    id: 1,
+                    name: "NTT",
+                    type: "Adventure",
+                    images: [
+                        Ntt1,
+                        NttDetailTrip1,
+                        NttDetailTrip2,
+                        NttDetailTrip3,
+                        NttDetailTrip4,
+                        NttDetailTrip5,
+                    ],
+                    topTitle: "5 Day Tour",
+                    slug: "5D Komodo kelimutu adventure",
+                    duration: "5 Hari 4 Malam",
+                    tripDestination:
+                        "Labuan Bajo - Pulau Komodo - Pink Beach - Pulau Padar - Ende - Kelimutu",
+                    priceperday: "IDR 3.876K/Day",
+                    pricetrip: "3.876.000",
+                    ringkasan:
+                        "Labuan Bajo ada apa sih kok digemari wisatawan ? Labuan Bajo ini digemari karena keindahan alamnya yang natural, dari sisi pulaunya, pantainya sampai keindahan laut yang beragam,” Tak habis pada segi keindahan alamnya saja, Labuan Bajo juga mampu menarik wisatawan dari segi budayanya dan kearifan lokal warga setempat.warga setempat dapat memadukan keindahan alam beserta budaya daerahnya untuk dijadikan daya tarik wisata.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                    itenary: [
+                        {
+                            day1: [
+                                {
+                                    destination: "Tiba di labuan bajo",
+                                    description:
+                                        "Tiba di bandara Komodo Labuan Bajo, Anda dijemput oleh guide kami, kemudian Anda diajak mengunjungi Gua Batu Cermin dan Plataran on the rock for sunset. Kemudian diantar menuju hotel.",
+                                },
+                            ],
+                            day2: [
+                                {
+                                    destination: "PULAU KOMODO – MANTA POINT – PINK BEACH",
+                                    description:
+                                        "Pagi ini menuju pelabuhan untuk berlayar ke Pulau Komodo melihat aktifitas komodo dan binatang liar lainnya di kawasan ini seperti rusa, kerbau, berbagai jenis burung tropis, babi hutan dll. Setelah itu, kembali ke phinisi boat menuju Manta Point dan berlayar menuju Pink Beach untuk menikmati keindahan terumbu karang sambil berenang, snorkeling ataupun bersantai di pinggir pantai.",
+                                },
+                            ],
+                            day3: [
+                                {
+                                    destination: "PULAU PADAR – PULAU KANAWA – LABUAN BAJO – ENDE",
+                                    description:
+                                        "Melanjutkan perjalanan menuju ke Pulau Padar yang terkenal dengan pemandangan bentang alam yang sangat indah, serta Anda melihat beberapa pulau kecil dan lautan yang begitu menawan. Kemudian melewati Pulau Kanawa dan mawan. Sore hari Anda di antar menuju bandara untuk penerbangan menuju Ende.",
+                                },
+                            ],
+                            day4: [
+                                {
+                                    destination: "ENDE – KELIMUTU – ENDE",
+                                    description:
+                                        "Bangun tidur sekitar pukul 04.00 pagi, lalu berangkat menuju puncak Kelimutu untuk melihat keajaiban danau 3 warna dan panorama matahari terbit di ufuk timur. Kemudian Anda diajak mengunjungi Kampung Walogai, kampung adat ini terdiri atas 18 rumah adat yang beratapkan ilalang dan berbentuk kerucut yang dibangun mengelilingi Tubu Kanga atau pelataran yang paling tinggi yang dipakai sebagai tempat pemujaan. Sore hari kembali ke Ende.",
+                                },
+                            ],
+                            day5: [
+                                {
+                                    destination: "DERPARTURE ENDE",
+                                    description:
+                                        "Pagi hari Anda berkesempatan berbelanja oleh-oleh khas flores sebelum diantar ke Bandara. Maka berakhirlah perjalanan Anda, sampai bertemu di tour kami selanjutnya. Terimakasih atas kepercayaan dan kerjasamanya. Home Sweet Home",
+                                },
+                            ],
+                        },
+                    ],
+                    syaratkondisi: [
+                        "Keberangkatan group minimal harus 2 orang",
+                        "Biaya tour setiap satu orang dalam IDR dapat berubah sewaktu-waktu yang diakibatkan karena kurangnya peserta dari jumlah minimum, perubahan harga dari airlines, hotel, bus, dan lain-lain",
+                        "Jadwal tour dapat berubah sewaktu-waktu  mengikuti kondisi yang memungkinkan tanpa mengurangi isi dalam acara tour tersebut.",
+                        "Reservasi hotel, transportasi dan lain-lain di pesankan berdasarkan ketersediaan tempat, setelah kami mendapatkan konfirmasi dari mitra tersebut.",
+                        "Apabila terjadi kondisi Force Majeur/Kondisi diluar kendali seperti (Bencana Alam, Pemogokan, Kehilangan, Kerusakan, Keterlambatan, sarana angkutan/ Transportasi dan lain-lain) yang dapat mempengaruhi rencana tour, maka akan bersifat Non Refundable (Tidak ada Pengembalian). dan biaya tour tidak termasuk pengeluaran tambahan yang disebabkan oleh Force Majeur.",
+                        "Bagi Peserta yang mendapati kamar triple (1 kamar ditempati 3 orang) kami tidak menjamin akan mendapatkan 3 tempat tidur yang terpisah, mengingat tempat tidur yang didapat tergantung kondisi hotel yang ada.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "NTT",
+                    type: "explore",
+                    priceperday: "IDR 2.124K/3 Days",
+                    pricetrip: "2.124.000",
+                    images: [
+                        NttDetailTrip2
+                    ],
+                    tripDestination:
+                        "Pulau Padar – Pink Beach – Taka Makasar – Pulau Komodo – Manta Point",
+                },
+                {
+                    id: 3,
+                    name: "NTT",
+                    type: "exotic",
+                    priceperday: "IDR 1.511K/3 Days",
+                    pricetrip: "1.511.000",
+                    images: [
+                        Ntt3
+                    ],
+                    tripDestination:
+                        "Ratenggaro – Walakiri – Warinding – Mandorek – Waingapu",
+                },
+            ],
+        },
+        kalimantan: {
+            id: 6,
+            image: kalimantan,
+            description:
+                "Bersiaplah terpesona dengan keindahan Raja Ampat-nya Kalimantan di Kepulauan Derawan, tempat penyu dan pari manta menari bebas di perairan kristal.",
+            trips: [
+                {
+                    id: 1,
+                    name: "Kalimantan",
+                    type: "experience",
+                    images: [
+                        Ntt1,
+                        NttDetailTrip1,
+                        NttDetailTrip2,
+                        NttDetailTrip3,
+                        NttDetailTrip4,
+                        NttDetailTrip5,
+                    ],
+                    topTitle: "4 Day Tour",
+                    slug: "4D Experience Derawan",
+                    duration: "4 Hari 3 Malam",
+                    tripDestination:
+                        "derawan - sangalaki-kakaban- maratua - gusung sanggalau",
+                    priceperday: "IDR 1.764K/4 Days",
+                    pricetrip: "1.764.000",
+                    ringkasan:
+                        "Kepulauan Derawan adalah sebuah kepulauan yang berada di Kabupaten Berau, Kalimantan Timur. Di kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut yang diminati wisatawan mancanegara terutama para penyelam kelas dunia. Ada empat pulau yang terkenal di kepulauan tersebut, yakni Pulau Maratua, Derawan, Sangalaki, dan Kakaban ",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                    itenary: [
+                        {
+                            day1: [
+                                {
+                                    destination: "BERAU - TANJUNG BATU - DERAWAN",
+                                    description:
+                                        "Tiba di bandara Kalimarau Berau. Anda dijemput, kemudian Anda langsung menuju Tanjung Batu dengan perjalanan darat kurang lebih 2,5 jam. Tiba di Tanjung Batu, Anda melanjutkan perjalanan menuju Pulau Derawan menggunakan speed boat dengan perjalanan laut kurang lebih 20-30 menit. Bermalam di Derawan.",
+                                },
+                            ],
+                            day2: [
+                                {
+                                    destination: "SANGALAKI – KAKABAN - MARATUA",
+                                    description:
+                                        "Hari ini Anda diajak explore Kepulauan Derawan, mengunjungi Pulau Sangalaki hunting manta ray dan ke penangkaran tukik. Kemudian menuju Pulau Kakaban untuk snorkling dengan ubur-ubur. Siang harinya ke Hidden Lagoon dan Maratua juga snorkeling dan berfoto dengan pemandangan laut dan pantai yang sangat indah. Anda diajak mengunjungi Gua Haji Mangku kolam yang cukup besar dan adanya di bawah tanah. Sore hari kembali ke Derawan.",
+                                },
+                            ],
+                            day3: [
+                                {
+                                    destination: "GUSUNG SANGGALAU",
+                                    description:
+                                        "Hari ini Anda diajak menuju Gusung Sanggalau yang merupakan pantai dengan hamparan pasir nan putih dan panjang. Siang hari Anda memiliki waktu bebas yang dapat Anda gunakan untuk bersantai atau snorkeling di sekitar pulau Derawan",
+                                },
+                            ],
+                            day4: [
+                                {
+                                    destination: "DERAWAN – TANJUNG BATU – BERAU",
+                                    description:
+                                        "Pagi hari Anda kembali ke Tanjung Batu dengan speed boat, dan dilanjutkan menuju bandara Berau untuk penerbangan kembali ke kota Anda. Maka berakhirlah perjalanan Anda, sampai bertemu di tour kami selanjutnya. Terimakasih atas kepercayaan dan kerjasamanya. Home Sweet Home",
+                                },
+                            ],
+                        },
+                    ],
+                    syaratkondisi: [
+                        "Keberangkatan group minimal harus 2 orang",
+                        "Biaya tour setiap satu orang dalam IDR dapat berubah sewaktu-waktu yang diakibatkan karena kurangnya peserta dari jumlah minimum, perubahan harga dari airlines, hotel, bus, dan lain-lain",
+                        "Jadwal tour dapat berubah sewaktu-waktu  mengikuti kondisi yang memungkinkan tanpa mengurangi isi dalam acara tour tersebut.",
+                        "Reservasi hotel, transportasi dan lain-lain di pesankan berdasarkan ketersediaan tempat, setelah kami mendapatkan konfirmasi dari mitra tersebut.",
+                        "Apabila terjadi kondisi Force Majeur/Kondisi diluar kendali seperti (Bencana Alam, Pemogokan, Kehilangan, Kerusakan, Keterlambatan, sarana angkutan/ Transportasi dan lain-lain) yang dapat mempengaruhi rencana tour, maka akan bersifat Non Refundable (Tidak ada Pengembalian). dan biaya tour tidak termasuk pengeluaran tambahan yang disebabkan oleh Force Majeur.",
+                        "Bagi Peserta yang mendapati kamar triple (1 kamar ditempati 3 orang) kami tidak menjamin akan mendapatkan 3 tempat tidur yang terpisah, mengingat tempat tidur yang didapat tergantung kondisi hotel yang ada.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "Kalimantan",
+                    type: "Adventure",
+                    priceperday: "IDR 876K/2 Days",
+                    pricetrip: "875.000",
+                    images: [
+                        NttDetailTrip2
+                    ],
+                    tripDestination:
+                        "Pulau Padar – Pink Beach – Taka Makasar – Pulau Komodo – Manta Point",
+                },
+            ],
+        },
+        
     },
     internasional: {
         asia: {
             id: 1,
             image: asia,
-            description: "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
-            trips: [
-                {
-
-                }
-            ]
+            description:
+                "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
+            trips: [{}],
         },
         europe: {
             id: 2,
             image: europe,
-            description: "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
-            trips: [
-                {
-
-                }
-            ]
+            description:
+                "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
+            trips: [{}],
         },
         africa: {
             id: 3,
             image: africa,
-            description: "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
-            trips: [
-                {
-
-                }
-            ]
+            description:
+                "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
+            trips: [{}],
         },
         america: {
             id: 4,
             image: america,
-            description: "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
-            trips: [
-                {
-
-                }
-            ]
+            description:
+                "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
+            trips: [{}],
         },
         australia: {
             id: 5,
             image: australia,
-            description: "Bersiaplah terpesona dengan keindahan Raja Ampat-nya Kalimantan di Kepulauan Derawan, tempat penyu dan pari manta menari bebas di perairan kristal.",
-            trips: [
-                {
-
-                }
-            ]
-        }
+            description:
+                "Bersiaplah terpesona dengan keindahan Raja Ampat-nya Kalimantan di Kepulauan Derawan, tempat penyu dan pari manta menari bebas di perairan kristal.",
+            trips: [{}],
+        },
     },
     paket: {
         honeymoon: {
             id: 1,
             image: honeymoon,
             harga: "5.160.000",
-            trip: [
-                {
-
-                }
-            ]
+            trip: [{}],
         },
         studytour: {
             id: 2,
             image: studytour,
             harga: "5.160.000",
-            trip: [
-                {
-
-                }
-            ]
+            trip: [{}],
         },
         adventure: {
             id: 3,
             image: adventure,
             harga: "5.160.000",
-            trip: [
-                {
-
-                }
-            ]
-        }
+            trip: [{}],
+        },
     },
     rental: {
         jogja: {
             id: 1,
             text: "Sewa Mobil Yogya",
             image: RentalJogja,
-            description: "Sewa Mobil Yogya murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            description:
+                "Sewa Mobil Yogya murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
             tipe: [
                 {
                     id: 1,
@@ -377,13 +871,14 @@ export const trips = {
                     mobil: "Hiace Premio",
                     image: RentalJogja,
                 },
-            ]
+            ],
         },
         semarang: {
             id: 2,
             text: "Sewa Mobil Semarang",
             image: RentalSemarang,
-            description: "Sewa Mobil Semarang murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            description:
+                "Sewa Mobil Semarang murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
             tipe: [
                 {
                     id: 1,
@@ -415,13 +910,14 @@ export const trips = {
                     mobil: "Hiace Premio",
                     image: RentalJogja,
                 },
-            ]
+            ],
         },
         jakarta: {
             id: 3,
             text: "Sewa Mobil Jakarta",
             image: RentalJakarta,
-            description: "Sewa Mobil Jakarta murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            description:
+                "Sewa Mobil Jakarta murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
             tipe: [
                 {
                     id: 1,
@@ -453,13 +949,14 @@ export const trips = {
                     mobil: "Hiace Premio",
                     image: RentalJogja,
                 },
-            ]
+            ],
         },
         bandung: {
             id: 4,
             text: "Sewa Mobil Bandung",
             image: RentalBandung,
-            description: "Sewa Mobil Bandung murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            description:
+                "Sewa Mobil Bandung murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
             tipe: [
                 {
                     id: 1,
@@ -491,13 +988,14 @@ export const trips = {
                     mobil: "Hiace Premio",
                     image: RentalJogja,
                 },
-            ]
+            ],
         },
         bali: {
             id: 5,
             text: "Sewa Mobil Bali",
             image: RentalBali,
-            description: "Sewa Mobil Bali murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            description:
+                "Sewa Mobil Bali murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
             tipe: [
                 {
                     id: 1,
@@ -529,7 +1027,7 @@ export const trips = {
                     mobil: "Hiace Premio",
                     image: RentalJogja,
                 },
-            ]
-        }
-    }
-}
+            ],
+        },
+    },
+};

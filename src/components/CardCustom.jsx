@@ -53,7 +53,7 @@ export default function CardCustom({
                         </div>
                     )}
 
-                    <div className={`flex-col gap-2 ${classNames.text || ''}`}>
+                    <div className={`flex-col justify-between items-end gap-2 ${classNames.text || ''}`}>
                         {category && (
                             <div className="flex items-center drop-shadow-xl ">
                                 {/* Background Shape (Image) */}
@@ -90,7 +90,7 @@ export default function CardCustom({
                                 {description}
                             </p>
                         )}
-                        <div className={`${classNames.footer || ''}`}>
+                        <div className={`bottom-0 ${classNames.footer || ''}`}>
                             <div className={`flex ${classNames.review || ''}`}>
                                 <Star fill="#FFC107" stroke="white" />
                                 <Star fill="#FFC107" stroke="white" />

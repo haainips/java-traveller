@@ -20,10 +20,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Trip" element={<TripHome />} />
 
-          <Route path="/Trip/Domestik/:region" element={<DomestikListPage />} />
-          <Route path="/Trip/Domestik/:region/:slug" element={ <DetailWisata />} />
+          <Route path="/Trip/:type/:region" element={<DomestikListPage />} />
+          <Route path="/Trip/:type/:region/:slug" element={ <DetailWisata />} />
 
-          <Route path="/Trip/Internasional/:region" element={<InternasionalListPage />} />
+          <Route path="/Trip/:type/:region" element={<InternasionalListPage />} />
 
           <Route path="/Trip/Honeymoon" element={<Honeymoon />} />
           <Route path="/Trip/Studytour" element={<Studytour />} />

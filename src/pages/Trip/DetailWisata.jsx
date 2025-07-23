@@ -9,46 +9,48 @@ import { Circle } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 function DetailWisata() {
-    const { slug } = useParams();
-    const navigate = useNavigate();
+    const { slug, region, type } = useParams();
     const allTrips = Object.values(trips.domestik).flatMap((region) => region.trips);
     const selectedTrip = allTrips.find((trip) => trip.slug === slug);
-    const formRef = useRef(null)
-    const [showScrollToForm, setShowScrollToForm] = useState(false)
-    
+    const selectedRegion = trips.domestik[region];
+    const formRef = useRef(null);
+    const [isFormVisible, setIsFormVisible] = useState(true);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsFormVisible(entry.isIntersecting);
+            },
+            { threshold: 0.3 }
+        );
+
+        if (formRef.current) {
+            observer.observe(formRef.current);
+        }
+
+        return () => {
+            if (formRef.current) {
+                observer.unobserve(formRef.current);
+            }
+        };
+    }, []);
+
     if (!selectedTrip) {
         return <div className="text-center py-10">Wisata tidak ditemukan.</div>;
     }
 
 
-    useEffect(() => {
-        if (!formRef.current) return
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setShowScrollToForm(!entry.isIntersecting)
-            },
-            {
-                root: null, // viewport
-                threshold: 0.9, // minimal 10% visible
-            }
-        )
-
-        observer.observe(formRef.current)
-
-        return () => {
-            observer.disconnect()
-        }
-    }, [])
-
     return (
-        <div className="relative px-20 py-10 font-primary">
-            <button
-                onClick={() => navigate(-1)}
-                className="mb-4 text-blue-600 hover:underline"
-            >
-                ← Kembali
-            </button>
+        <div className="relative px-20 py-4 font-primary">
+            <div className="flex gap-2 font-medium mb-6">
+                <Link to={"/"} className="hover:underline transition">Home</Link>
+                <p>/</p>
+                <Link to={"/Trip"} className="hover:underline transition">Trip</Link>
+                <p>/</p>
+                <Link to={`/Trip/${type}/${region}`} className="hover:underline transition capitalize">{region}</Link>
+                <p>/</p>
+                <Link className="text-blue-500 underline">{slug}</Link>
+            </div>
 
             <div className="flex justify-between mb-4">
                 <div className="font-semibold text-4xl">
@@ -76,12 +78,12 @@ function DetailWisata() {
             <div className="grid grid-cols-5 grid-row-2 gap-4">
                 <ImageSlider
                     className={{
-                        container: "w-full rounded-xl col-span-3 row-span-2 object-cover"
+                        container: "w-full h-[500px] rounded-xl col-span-3 row-span-2 object-cover"
                     }}
                     images={selectedTrip.images} />
-                <img src={selectedTrip.images[1]} alt="" className="h-full w-full col-span-2 col-start-4 row-span-1 rounded-tr-xl object-cover" />
-                <img src={selectedTrip.images[2]} alt="" className="h-full w-full col-span-1 col-start-4 row-span-1 object-cover" />
-                <img src={selectedTrip.images[3]} alt="" className="h-full w-full col-span-1 col-start-5 row-span-1 rounded-br-xl object-cover" />
+                <img src={selectedTrip.images[1]} alt="" className="h-[335px] w-full col-span-2 col-start-4 row-span-1 rounded-tr-xl object-cover" />
+                <img src={selectedTrip.images[2]} alt="" className="h-[150px] w-full col-span-1 col-start-4 row-span-1 object-cover" />
+                <img src={selectedTrip.images[3]} alt="" className="h-[150px] w-full col-span-1 col-start-5 row-span-1 rounded-br-xl object-cover" />
             </div>
 
             {/* Ringkasan */}
@@ -122,18 +124,15 @@ function DetailWisata() {
                     </div>
                 </span>
 
-                <FormReservation ref={formRef} price={selectedTrip.pricetrip} />
+                <div ref={formRef} id="form" className="scroll-m-22">
+                    <FormReservation price={selectedTrip.pricetrip} />
+                </div>
 
-                {showScrollToForm && (
-                    <button
-                        onClick={() => formRef.current?.scrollIntoView({ behavior: "smooth" })}
-                        className="fixed bottom-6 right-6 z-50 bg-primary text-white p-3 rounded-full shadow-md hover:bg-primary/90"
-                    >
-                        Form Reservasi
-                    </button>
+                {!isFormVisible && (
+                    <a href="#form" className="fixed bottom-10 font-bold right-10 bg-utama text-black py-3 px-6 rounded-full shadow-2xl z-50 cursor-pointer transition hover:bg-black hover:text-utama">
+                        Pesan Sekarang
+                    </a>
                 )}
-
-                {/* ... konten bawah */}
 
                 {selectedTrip.itenary && selectedTrip.itenary.length > 0 && (
                     <div className="gap-10 bg-[#F8F8F8] col-span-3 border border-gray-300 rounded-2xl shadow-sm py-10 px-10 space-y-6">
@@ -149,14 +148,14 @@ function DetailWisata() {
                                             <Circle size={30} fill="#FFA600" stroke="white" />
                                         </div>
                                         {/* Line */}
-                                            <div className="flex-1 border-l-2 border-utama border-dashed"></div>
+                                        <div className="flex-1 border-l-2 border-utama border-dashed"></div>
                                     </div>
 
                                     {/* Content */}
                                     <div className="mb-6">
                                         <div className="flex items-center gap-18 font-bold uppercase text-[#1A1A1A]">
                                             <h3 className="text-lg">{dayKey} :</h3>
-                                            <h4 className="text-lg">({activities[0]?.destination})</h4>
+                                            <h4 className="text-lg">({activities[0].destination})</h4>
                                         </div>
 
                                         {activities.map((activity, i) => (
@@ -173,6 +172,19 @@ function DetailWisata() {
                     </div>
                 )}
 
+                {selectedTrip.syaratkondisi && selectedTrip.syaratkondisi.length > 0 && (
+                    <div className=" bg-[#F8F8F8] col-span-3 border border-gray-300 rounded-2xl shadow-sm py-8 px-10 space-y-10">
+                        <span className="flex justify-center gap-1">
+                            <h1 className="font-semibold text-center text-2xl text-utama uppercase">Syarat</h1>
+                            <h1 className="font-semibold text-center text-2xl uppercase">dan Kondisi</h1>
+                        </span>
+                        <ul className="list-decimal space-y-4 text-justify font-medium pl-4 text-md">
+                            {selectedTrip.syaratkondisi.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
             </div>
         </div>
     );

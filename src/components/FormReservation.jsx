@@ -15,7 +15,7 @@ import { Button } from "../../@/components/ui/button"
 import { CalendarIcon } from "lucide-react"
 import { Popover, PopoverTrigger, PopoverContent } from "../../@/components/ui/popover"
 import { Calendar } from "../../@/components/ui/calendar"
-import {format} from "date-fns"
+import { format } from "date-fns"
 import { cn } from "@/lib/utils"
 import { forwardRef } from "react"
 import React from "react"
@@ -27,7 +27,8 @@ const formSchema = z.object({
     people: z.coerce.number().min(1, "Jumlah orang minimal 1"),
     date: z.date({ required_error: "Tanggal wajib diisi" }),
 })
-const ReservationForm = React.forwardRef(({ price }, ref) => {
+
+const ReservationForm = forwardRef(({ price }, ref) => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -41,111 +42,131 @@ const ReservationForm = React.forwardRef(({ price }, ref) => {
 
     const onSubmit = (values) => {
         console.log("Data dikirim:", values)
+        alert('Reservasi berhasil dikirim!');
     }
 
     return (
-        <Form {...form}>
-            <form ref={ref} onSubmit={form.handleSubmit(onSubmit)} className="col-span-1 space-y-3 px-10 py-6 border shadow-md rounded-xl bg-white">
-                {price && (
-                    <div className="flex justify-between text-lg">
-                        <h2 className="font-bold text-center">IDR :</h2>
-                        <h2 className="font-bold text-center">Rp{price}</h2>
-                    </div>
-                )}
-                <span className="flex justify-between font-semibold text-lg border-b-2 border-gray-200 mb-2"></span>
-                <h1 className="text-center text-xl font-semibold mb-8">Form Reservasi Wisata</h1>
-                <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Nama</FormLabel>
-                            <FormControl>
-                                <Input placeholder="Masukkan nama lengkap" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
+        // Menambahkan ref ke form utama
+        <div ref={ref} className="sticky top-10">
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="col-span-1 space-y-1 px-8 py-10 border shadow-md rounded-xl bg-white">
+                    {price && (
+                        <div className="flex justify-between text-lg">
+                            <h2 className="font-bold text-center">IDR :</h2>
+                            <h2 className="font-bold text-center">Rp{price}</h2>
+                        </div>
                     )}
-                />
+                    <span className="flex justify-between font-semibold text-lg border-b-2 border-gray-200 mb-2"></span>
+                    <h1 className="text-center text-xl font-semibold mb-8">Form Reservasi Wisata</h1>
 
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                                <Input type="email" placeholder="contoh@email.com" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+                    {/* Nama */}
+                    <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Nama</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="Masukkan nama lengkap" {...field} />
+                                </FormControl>
+                                <div className="h-5">
+                                    <FormMessage />
+                                </div>
+                            </FormItem>
+                        )}
+                    />
 
-                <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>No WhatsApp</FormLabel>
-                            <FormControl>
-                                <Input type="tel" placeholder="08xxxxxxxxxx" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+                    {/* Email */}
+                    <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Email</FormLabel>
+                                <FormControl>
+                                    <Input type="email" placeholder="contoh@email.com" {...field} />
+                                </FormControl>
+                                <div className="h-5">
+                                    <FormMessage />
+                                </div>
+                            </FormItem>
+                        )}
+                    />
 
-                <FormField
-                    control={form.control}
-                    name="people"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Jumlah Orang</FormLabel>
-                            <FormControl>
-                                <Input type="number" min={1} {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+                    {/* No WhatsApp */}
+                    <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>No WhatsApp</FormLabel>
+                                <FormControl>
+                                    <Input type="tel" placeholder="08xxxxxxxxxx" {...field} />
+                                </FormControl>
+                                <div className="h-5">
+                                    <FormMessage />
+                                </div>
+                            </FormItem>
+                        )}
+                    />
 
-                <FormField
-                    control={form.control}
-                    name="date"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Tanggal Keberangkatan</FormLabel>
-                            <Popover>
-                                <PopoverTrigger asChild>
-                                    <FormControl>
-                                        <Button
-                                            variant="outline"
-                                            className={cn("w-full justify-start text-left font-normal", !field.value && "text-muted-foreground")}
-                                        >
-                                            <CalendarIcon className="mr-2 h-4 w-4" />
-                                            {field.value ? format(field.value, "dd MMM yyyy") : "Pilih tanggal"}
-                                        </Button>
-                                    </FormControl>
-                                </PopoverTrigger>
-                                <PopoverContent className="w-auto p-0">
-                                    <Calendar
-                                        mode="single"
-                                        selected={field.value}
-                                        onSelect={field.onChange}
-                                        initialFocus
-                                    />
-                                </PopoverContent>
-                            </Popover>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+                    {/* Jumlah Orang */}
+                    <FormField
+                        control={form.control}
+                        name="people"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Jumlah Orang</FormLabel>
+                                <FormControl>
+                                    <Input type="number" min={1} {...field} />
+                                </FormControl>
+                                <div className="h-5">
+                                    <FormMessage />
+                                </div>
+                            </FormItem>
+                        )}
+                    />
 
-                <Button type="submit" className="w-full mt-4">Kirim</Button>
-            </form>
-        </Form>
+                    {/* Tanggal Keberangkatan */}
+                    <FormField
+                        control={form.control}
+                        name="date"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Tanggal Keberangkatan</FormLabel>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <FormControl>
+                                            <Button
+                                                variant="outline"
+                                                className={cn("w-full justify-start text-left font-normal", !field.value && "text-muted-foreground")}
+                                            >
+                                                <CalendarIcon className="mr-2 h-4 w-4" />
+                                                {field.value ? format(field.value, "dd MMM yyyy") : "Pilih tanggal"}
+                                            </Button>
+                                        </FormControl>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0">
+                                        <Calendar
+                                            mode="single"
+                                            selected={field.value}
+                                            onSelect={field.onChange}
+                                            initialFocus
+                                        />
+                                    </PopoverContent>
+                                </Popover>
+                                <div className="h-5">
+                                    <FormMessage />
+                                </div>
+                            </FormItem>
+                        )}
+                    />
+
+                    <Button type="submit" className="w-full">Kirim</Button>
+                </form>
+            </Form>
+        </div>
     )
 })
 
-export default ReservationForm
+export default ReservationForm;
