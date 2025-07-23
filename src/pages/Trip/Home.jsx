@@ -23,13 +23,13 @@ function Home() {
     };
     return (
         <section className="py-10 bg-gray-300/20 px-30 font-primary space-y-10">
-            <span className="font-bold">
+            <span id="domestik" className="font-bold scroll-mt-10">
                 <h1 className="text-3xl mb-2">Temukan Liburanmu</h1>
                 <h2 className="text-2xl text-center py-4 mb-2">Domestic</h2>
             </span>
             
             {/* Trip Domestik */}
-            <div className="grid grid-cols-3 gap-6">
+            <div  className="grid grid-cols-3 gap-6">
                 {domestikRegions.map(([domestikKey, domestikData]) => (
                     <Link key={domestikKey} to={`/Trip/Domestik/${domestikKey}`}>
                         <CardCustom
@@ -55,7 +55,7 @@ function Home() {
             </div>
             
             {/* Trip Internasional */}
-            <span className="font-bold">
+            <span id="internasional" className="font-bold scroll-mt-20">
                 <h2 className="text-2xl text-center py-4 mb-2">Internasional</h2>
             </span>
             <div className="grid grid-cols-3 gap-6">

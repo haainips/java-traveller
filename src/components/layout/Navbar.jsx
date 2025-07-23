@@ -1,8 +1,11 @@
 import logo from "../../assets/Javatraveller-logo.png"
 import "../../App.css"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 export default function Navbar() {
+    const location = useLocation();
+    const isScrollablePage = location.pathname === '/' || location.pathname === '/Trip';
+
     return (
         <div className="sticky top-0 z-50 bg-white">
             <div className="flex justify-between items-center px-20 py-6 font-primary border-b border-gray-200">
@@ -11,8 +14,20 @@ export default function Navbar() {
                 </div>
                 <div className="flex lg:text-md lg:gap-2 font-semibold">
                     <Link to="/" className="px-2 py-1 rounded-lg hover:bg-utama transition">Home</Link>
-                    <a href="#domestik" className="px-2 py-1 rounded-lg hover:bg-utama transition">Domestic</a>
-                    <a href="#internasional" className="px-2 py-1 rounded-lg hover:bg-utama transition">International</a>
+                    
+                    {isScrollablePage ? (
+                        <>
+                            <a href="#domestik" className="px-2 py-1 rounded-lg hover:bg-utama transition">Domestic</a>
+                            <a href="#internasional" className="px-2 py-1 rounded-lg hover:bg-utama transition">International</a>
+                        </>
+                    ) : (
+                        // Jika di halaman lain, navigasi ke halaman Trip lalu scroll
+                        <>
+                            <Link to="/Trip#domestik" className="px-2 py-1 rounded-lg hover:bg-utama transition">Domestic</Link>
+                            <Link to="/Trip#internasional" className="px-2 py-1 rounded-lg hover:bg-utama transition">International</Link>
+                        </>
+                    )}
+                    
                     <div className="relative group">
                         <span className="flex items-center gap-2 px-2 py-1 rounded-lg hover:bg-utama transition cursor-pointer">
                             Paket Tour
