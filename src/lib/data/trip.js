@@ -12,6 +12,26 @@ import australia from "../../assets/internasional/australia.jpg"
 import honeymoon from "../../assets/paket/honeymoon.jpg"
 import studytour from "../../assets/paket/studytour.jpg"
 import adventure from "../../assets/paket/adventure.jpg"
+import RentalJogja from "../../assets/rental/sewa-mobil-jogja.png"
+import RentalSemarang from "../../assets/rental/sewa-mobil-semarang.png"
+import RentalJakarta from "../../assets/rental/sewa-mobil-jakarta.png"
+import RentalBandung from "../../assets/rental/sewa-mobil-bandung.png"
+import RentalBali from "../../assets/rental/sewa-mobil-bali.png"
+import Yogya1 from "../../assets/domestik/jawa/yogya-1.jpg"
+import Yogya2 from "../../assets/domestik/jawa/yogya-2.jpg"
+import Yogya3 from "../../assets/domestik/jawa/yogya-3.jpg"
+import Yogya4 from "../../assets/domestik/jawa/yogya-4.jpg"
+import Yogya5 from "../../assets/domestik/jawa/yogya-5.jpg"
+import Yogya6 from "../../assets/domestik/jawa/yogya-6.jpg"
+import Pacitan from "../../assets/domestik/jawa/pacitan.jpg"
+import Malang1 from "../../assets/domestik/jawa/malang-1.jpg"
+import Malang2 from "../../assets/domestik/jawa/malang-2.jpg"
+import KarimunJawa from "../../assets/domestik/jawa/karimun-jawa.jpg"
+import Banyuwangi from "../../assets/domestik/jawa/banyuwangi.jpg"
+import Bandung from "../../assets/domestik/jawa/bandung.jpg"
+import Yogya1DetailTrip1 from "../../assets/domestik/jawa/yogya1-detail1.jpg"
+import Yogya1DetailTrip2 from "../../assets/domestik/jawa/yogya1-detail2.png"
+import Yogya1DetailTrip3 from "../../assets/domestik/jawa/yogya1-detail3.png" 
 
 export const trips = {
     domestik: {
@@ -20,108 +40,169 @@ export const trips = {
             image: jawa,
             description: "Rasakan pengalaman tak terlupakan di Jawa, pulau dengan warisan budaya terkaya di Indonesia, lengkap dengan kuliner lezat, seni tradisional yang memesona, dan keramahan penduduk lokal yang hangat",
             trips: [
-            {
-                id: 1,
-                name: "Yogyakarta",
-                images: [
+                {
+                    id: 1,
+                    name: "Yogyakarta",
+                    type: "Instagramable",
+                    images: [
+                        Yogya1,
+                        Yogya1DetailTrip1,
+                        Yogya1DetailTrip2,
+                        Yogya1DetailTrip3
+                    ],
+                    topTitle: "3 Day Tour",
+                    slug: "Jogja Adventure + Cycling",
+                    duration: "3 Hari 2 Malam",
+                    tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
+                    priceperday: "IDR.424K/1 day",
+                    pricetrip: "1.511.000",
+                    ringkasan: "Jogjakarta sangat dikenal dengan budaya yang masih begitu kental dan memiliki banyak sekali obyek wisata yang menjadikan daya tarik wisata baik kunjungan wisatawan mancanegara maupun wisatawan domestik. Jogjakarta memiliki obyek wisata mulai dari budaya, edukasi, alam, sampai tempat-tempat yang instagramable. Sisi lain dari kota Jogjakarta yang terkenal dengan obyek-obyek wisatanya Jogjakarta juga menyuguhkan berbagai makanan tradional dan kerajinan tradisional.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi"
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi"
+                    ],
+                    itenary: [{
+                        day1: [{
+                            destination: "Gua Pindul - Ngobaran - Heha Ocean View",
+                            description: "Pagi hari peserta dijemput di meeting point (Hotel/Stasiun/Bandara). Menuju ke Gunung Kidul terletak di selatan Yogyakarta. Cave tubing menyusuri gua alam di Gua Pindul. Makan siang di lokal restaurant. setelah itu menuju Pantai Ngobaran Balinya Jogja. Menikmati pemandangan laut lepas di tepi tebing yang indah dengan spot foto instagramble di Heha Ocean View."
+                        }],
+                        day2: [{
+                            destination: "Cycling - Svargabumi - Borobudur",
+                            description: "Pagi ini Cycling dengan rute yang menyusuri pegunungan Menoreh dengan pemandangan yang sangat indah. Makan siang dengan suasana pedesaan. Selanjutnya Mengunjungi Svargabumi wisata tengah sawah dengan spot instagramable. Mengunjungi candi Borobudur kuil Buddha terbesar yang menjadi situs warisan dunia UNESCO."
+                        }],
+                        day3: [{
+                            destination: "Lava Tour - Malioboro",
+                            description: "Pagi ini menuju Kaliurang di kaki gunung Merapi. Menikmati Lava Tour menyusuri aliran lava di lereng merapi dengan jeep (denan biaya sendiri / optional tour). Mengunjungi The Lost World Castle bangunan konsep kastil seperti di Eropa. Makan siang di lokal restaurant. Menikmati keindahan sunset dan view kota dari ketinggian di Heha Sky View. berbelanja oleh-oleh khas di Yogya di Malioboro. Diantar kembali ke meeting point (hotel/stasiun/bandara) Tour selesai dan Terimakasih"
+                        }],
 
-                ],
-                tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
-                price: "424K/day",
-            
-            },
-            {
-                id: 2,
-                name: "Yogyakarta",
-                images: [
+                    }]
 
-                ],
-                tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
-                price: "876K/day",
-            
-            },
-            {
-                id: 3,
-                name: "Yogyakarta",
-                images: [
+                },
+                {
+                    id: 2,
+                    name: "Yogyakarta",
+                    type: "Instagramable",
+                    images: [
+                        Yogya2
+                    ],
+                    tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
+                    priceperday: "IDR.876K/2 day",
 
-                ],
-                tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
-                price: "1.511K/day",
-            
-            },
-            {
-                id: 4,
-                name: "Yogyakarta",
-                images: [
+                },
+                {
+                    id: 3,
+                    name: "Yogyakarta",
+                    type: "Adventure",
+                    images: [
+                        Yogya3
+                    ],
+                    tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
+                    priceperday: "IDR.1.511K/3 days",
 
-                ],
-                tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
-                price: "476K/day",
-            
-            },
-            {
-                id: 5,
-                name: "Yogyakarta",
-                images: [
+                },
+                {
+                    id: 4,
+                    name: "Yogyakarta",
+                    type: "Fun",
+                    images: [
+                        Yogya4
+                    ],
+                    tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
+                    priceperday: "IDR.476K/1 day",
 
-                ],
-                tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
-                price: "931K/day",
-            
-            },
-            {
-                id: 6,
-                name: "Yogyakarta",
-                images: [
+                },
+                {
+                    id: 5,
+                    name: "Yogyakarta",
+                    type: "Enjoy",
+                    images: [
+                        Yogya5
+                    ],
+                    tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
+                    priceperday: "IDR.931K/2 day",
 
-                ],
-                tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
-                price: "435K/day",
-            
-            },
-            {
-                id: 7,
-                name: "Pacitan",
-                images: [],
-                tripDestination: "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
-                price: "Call for Price/2 days",
-            },
-            {
-                id: 8,
-                name: "Malang",
-                images: [],
-                tripDestination: "Museum Angkut - BNS - Jatim Park 2 - Kawah Bromo",
-                price: "Call for Price/2 days",
-            },
-            {
-                id: 9,
-                name: "Malang",
-                images: [],
-                tripDestination: "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
-                price: "Call for Price/3 days",
-            },
-            {
-                id: 10,
-                name: "Karimun Jawa",
-                images: [],
-                tripDestination: "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
-                price: "Call for Price/2 days",
-            },
-            {
-                id: 11,
-                name: "Banyuwangi",
-                images: [],
-                tripDestination: "Museum Angkut - BNS - Jatim Park 2 - Kawah Bromo",
-                price: "Call for Price/2 days",
-            },
-            {
-                id: 12,
-                name: "Bandung",
-                images: [],
-                tripDestination: "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
-                price: "Call for Price/3 days",
-            }
+                },
+                {
+                    id: 6,
+                    name: "Yogyakarta",
+                    type: "Natural",
+                    images: [
+                        Yogya6
+                    ],
+                    tripDestination: "Kraton - Malioboro - Pinus Mangunan - Watu Gubit",
+                    priceperday: "IDR.435K/1 day",
+
+                },
+                {
+                    id: 7,
+                    name: "Pacitan",
+                    type: "Explore",
+                    images: [
+                        Pacitan
+                    ],
+                    tripDestination: "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
+                    priceperday: "Call for Price/2 days",
+                },
+                {
+                    id: 8,
+                    name: "Malang",
+                    type: "Enjoy",
+                    images: [
+                        Malang1
+                    ],
+                    tripDestination: "Museum Angkut - BNS - Jatim Park 2 - Kawah Bromo",
+                    priceperday: "Call for Price/2 days",
+                },
+                {
+                    id: 9,
+                    name: "Malang",
+                    type: "Natural",
+                    images: [
+                        Malang2
+                    ],
+                    tripDestination: "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
+                    priceperday: "Call for Price/3 days",
+                },
+                {
+                    id: 10,
+                    name: "Karimun Jawa",
+                    type: "Explore",
+                    images: [
+                        KarimunJawa
+                    ],
+                    tripDestination: "Gua Tabuhan - Gua Gong - Pantai Klayar - Sungai Maron",
+                    priceperday: "Call for Price/2 days",
+                },
+                {
+                    id: 11,
+                    name: "Banyuwangi",
+                    type: "Enjoy",
+                    images: [
+                        Banyuwangi
+                    ],
+                    tripDestination: "Museum Angkut - BNS - Jatim Park 2 - Kawah Bromo",
+                    priceperday: "Call for Price/2 days",
+                },
+                {
+                    id: 12,
+                    name: "Bandung",
+                    type: "Natural",
+                    images: [
+                        Bandung
+                    ],
+                    tripDestination: "Jatim Park 2 - Eco Green Park - Museum Angkut - BNS",
+                    priceperday: "Call for Price/3 days",
+                }
             ]
         },
         sumatera: {
@@ -256,6 +337,198 @@ export const trips = {
                 {
 
                 }
+            ]
+        }
+    },
+    rental: {
+        jogja: {
+            id: 1,
+            text: "Sewa Mobil Yogya",
+            image: RentalJogja,
+            description: "Sewa Mobil Yogya murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            tipe: [
+                {
+                    id: 1,
+                    mobil: "Kijang Inova Reborn",
+                    image: RentalJogja,
+                },
+                {
+                    id: 2,
+                    mobil: "Terios New",
+                    image: RentalJogja,
+                },
+                {
+                    id: 3,
+                    mobil: "Inova Reborn Diesel",
+                    image: RentalJogja,
+                },
+                {
+                    id: 4,
+                    mobil: "Honda Brio",
+                    image: RentalJogja,
+                },
+                {
+                    id: 5,
+                    mobil: "Hiace Commuter",
+                    image: RentalJogja,
+                },
+                {
+                    id: 6,
+                    mobil: "Hiace Premio",
+                    image: RentalJogja,
+                },
+            ]
+        },
+        semarang: {
+            id: 2,
+            text: "Sewa Mobil Semarang",
+            image: RentalSemarang,
+            description: "Sewa Mobil Semarang murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            tipe: [
+                {
+                    id: 1,
+                    mobil: "Kijang Inova Reborn",
+                    image: RentalJogja,
+                },
+                {
+                    id: 2,
+                    mobil: "Terios New",
+                    image: RentalJogja,
+                },
+                {
+                    id: 3,
+                    mobil: "Inova Reborn Diesel",
+                    image: RentalJogja,
+                },
+                {
+                    id: 4,
+                    mobil: "Honda Brio",
+                    image: RentalJogja,
+                },
+                {
+                    id: 5,
+                    mobil: "Hiace Commuter",
+                    image: RentalJogja,
+                },
+                {
+                    id: 6,
+                    mobil: "Hiace Premio",
+                    image: RentalJogja,
+                },
+            ]
+        },
+        jakarta: {
+            id: 3,
+            text: "Sewa Mobil Jakarta",
+            image: RentalJakarta,
+            description: "Sewa Mobil Jakarta murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            tipe: [
+                {
+                    id: 1,
+                    mobil: "Kijang Inova Reborn",
+                    image: RentalJogja,
+                },
+                {
+                    id: 2,
+                    mobil: "Terios New",
+                    image: RentalJogja,
+                },
+                {
+                    id: 3,
+                    mobil: "Inova Reborn Diesel",
+                    image: RentalJogja,
+                },
+                {
+                    id: 4,
+                    mobil: "Honda Brio",
+                    image: RentalJogja,
+                },
+                {
+                    id: 5,
+                    mobil: "Hiace Commuter",
+                    image: RentalJogja,
+                },
+                {
+                    id: 6,
+                    mobil: "Hiace Premio",
+                    image: RentalJogja,
+                },
+            ]
+        },
+        bandung: {
+            id: 4,
+            text: "Sewa Mobil Bandung",
+            image: RentalBandung,
+            description: "Sewa Mobil Bandung murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            tipe: [
+                {
+                    id: 1,
+                    mobil: "Kijang Inova Reborn",
+                    image: RentalJogja,
+                },
+                {
+                    id: 2,
+                    mobil: "Terios New",
+                    image: RentalJogja,
+                },
+                {
+                    id: 3,
+                    mobil: "Inova Reborn Diesel",
+                    image: RentalJogja,
+                },
+                {
+                    id: 4,
+                    mobil: "Honda Brio",
+                    image: RentalJogja,
+                },
+                {
+                    id: 5,
+                    mobil: "Hiace Commuter",
+                    image: RentalJogja,
+                },
+                {
+                    id: 6,
+                    mobil: "Hiace Premio",
+                    image: RentalJogja,
+                },
+            ]
+        },
+        bali: {
+            id: 5,
+            text: "Sewa Mobil Bali",
+            image: RentalBali,
+            description: "Sewa Mobil Bali murah menjadi opsi terbaik di segala kebutuhanmu. Dapatkan tarif rental mobil 100 ribuan hanya di Java Traveler, selain itu ada pilihan sewa mobil jogja lepas atau dengan sopir ramah dan berpengalaman. Kami menawarkan berbagai jenis rental mobil Jogja yang siap sedia untuk segala kebutuhan Anda untuk acara keluarga, dinas, wedding, wisuda atau berwisata dengan jarak jauh maupun dekat. Anda bisa memilih sewa mobil Jogja per 6 jam, 8 jam, 1 hari, mingguan hingga bulanan.Berikut harga sewa mobil di Jogja 2025 serta fasilitas dari Java Traveler dari sewa mobil Yogya terbaik & termurah",
+            tipe: [
+                {
+                    id: 1,
+                    mobil: "Kijang Inova Reborn",
+                    image: RentalJogja,
+                },
+                {
+                    id: 2,
+                    mobil: "Terios New",
+                    image: RentalJogja,
+                },
+                {
+                    id: 3,
+                    mobil: "Inova Reborn Diesel",
+                    image: RentalJogja,
+                },
+                {
+                    id: 4,
+                    mobil: "Honda Brio",
+                    image: RentalJogja,
+                },
+                {
+                    id: 5,
+                    mobil: "Hiace Commuter",
+                    image: RentalJogja,
+                },
+                {
+                    id: 6,
+                    mobil: "Hiace Premio",
+                    image: RentalJogja,
+                },
             ]
         }
     }

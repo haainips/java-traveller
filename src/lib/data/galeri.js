@@ -11,7 +11,7 @@ export const galleryData = [
     {
         id: 1,
         type: "Wisata",
-        name: "Prambanan",
+        name: "Candi Prambanan",
         image: prambanan,
         style: "row-span-4 col-start-1"
     },
@@ -27,7 +27,7 @@ export const galleryData = [
         type: "Wisata",
         name: "Candi Borobudur",
         image: borobudur,
-        style: "col-start-2 row-start-6"
+        style: "row-span-2 col-start-2"
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ export const galleryData = [
         type: "Wisata",
         name: "Heha Sky View",
         image: hehaSkyView,
-        style: "row-span-2 col-start-2"
+        style: "col-start-2 row-start-6"
     },
     {
         id: 6,

@@ -1,18 +1,38 @@
-import logo from "../../assets/logo.png"
+import logo from "../../assets/Javatraveller-logo.png"
 import "../../App.css"
+import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 export default function Navbar() {
     return (
-        <div className="flex justify-between items-center px-20 py-4 font-primary">
-            <div className="w-80">
-                <img src={logo} className="w-fit"></img>
-            </div>
-            <div className="flex text-xl gap-6 font-semibold">
-                <span className="px-2 py-1 rounded-lg hover:bg-utama transition">Home</span>
-                <a className="px-2 py-1 rounded-lg hover:bg-utama transition">Domestic</a>
-                <a className="px-2 py-1 rounded-lg hover:bg-utama transition">International</a>
-                <span className="px-2 py-1 rounded-lg hover:bg-utama transition">Paket Tour</span>
-                <a className="px-2 py-1 rounded-lg hover:bg-utama transition">Sewa Mobil</a>
-                <a className="px-2 py-1 rounded-lg hover:bg-utama transition">Hubungi Kami</a>
+        <div className="sticky top-0 z-50 bg-white">
+            <div className="flex justify-between items-center px-20 py-6 font-primary border-b border-gray-200">
+                <div className="w-60">
+                    <img src={logo} className="w-fit"></img>
+                </div>
+                <div className="flex lg:text-md lg:gap-2 font-semibold">
+                    <Link to="/" className="px-2 py-1 rounded-lg hover:bg-utama transition">Home</Link>
+                    <a href="#domestik" className="px-2 py-1 rounded-lg hover:bg-utama transition">Domestic</a>
+                    <a href="#internasional" className="px-2 py-1 rounded-lg hover:bg-utama transition">International</a>
+                    <div className="relative group">
+                        <span className="flex items-center gap-2 px-2 py-1 rounded-lg hover:bg-utama transition cursor-pointer">
+                            Paket Tour
+                            <ChevronDown className="transition group-hover:rotate-180" />
+                        </span>
+
+                        {/* Dropdown */}
+                        <div className="absolute hidden group-hover:block left-0 w-50 pt-1 z-50 ">
+                            <div className="h-1 pointer-events-none"></div>
+                            <div className="bg-white shadow-lg rounded-lg hover:rounded-lg flex flex-col pointer-events-auto border-2 border-gray-300">
+                                <Link to="/Trip/Honeymoon" href="#" className="px-6 py-2 hover:bg-utama hover:rounded-md text-md">Honeymoon</Link>
+                                <Link to="/Trip/Studytour" href="#" className="px-6 py-2 hover:bg-utama hover:rounded-md text-md">Studytour</Link>
+                                <Link to="Trip/Adventure" href="#" className="px-6 py-2 hover:bg-utama hover:rounded-md text-md">Adventure</Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <Link to="/Sewa-mobil" className="px-2 py-1 rounded-lg hover:bg-utama transition">Sewa Mobil</Link>
+                    <a href="#footer" className="px-2 py-1 rounded-lg hover:bg-utama transition">Hubungi Kami</a>
+                </div>
             </div>
         </div>
     );
