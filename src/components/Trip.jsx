@@ -86,26 +86,27 @@ export default function Trip() {
                     <CarouselContent className="-ml-5 ">
                         {internationalRegions.map(([interRegionKey, interRegionData]) => (
                             <CarouselItem key={interRegionKey} className="pl-5 basis-1/3">
-                                <div>
-                                    <Card className="py-0">
-                                        <CardContent>
-                                            <img
-                                                src={interRegionData.image}
-                                                alt={interRegionKey}
-                                                className="w-full h-48 object-cover rounded-t-xl"
-                                            />
-                                            <div className="p-4">
-                                                <span className="flex items-center gap-2">
-                                                    <MapPin size={28} fill="black" stroke="white" />
-                                                    <h1 className="text-md font-bold uppercase">{interRegionNames[interRegionKey] || interRegionKey}</h1>
-                                                </span>
-                                                <p className="text-sm mt-2 text-justify h-30">{interRegionData.description}</p>
-                                                <div className="flex justify-center pt-4">
-                                                    <Button className="bg-utama text-black px-6" >Lihat Semua</Button>
-                                                </div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
+                                <div className="p-1">
+                                    <Link key={interRegionKey} to={`/Trip/Domestik/${interRegionKey}`}>
+                                        <CardCustom
+                                            classNames={{
+                                                card: "",
+                                                review: "hidden",
+                                                image: "w-full h-48 object-cover",
+                                                title: "font-bold text-md py-4 uppercase",
+                                                description: "text-sm font-primary text-justify mb-4 line-clamp-4",
+                                                subtitle: "flex items-center gap-2",
+                                                text: "px-4 mb-4",
+                                                buttonLabel: "text-sm px-4 py-2 text-black font-semibold rounded-md hover:bg-black hover:text-utama transition",
+                                                footer: "flex justify-center py-2",
+                                            }}
+                                            image={interRegionData.image}
+                                            icon={<MapPin fill="black" stroke="white" />}
+                                            title={regions[interRegionKey] || interRegionKey}
+                                            description={interRegionData.description}
+                                            buttonLabel={"Lihat Semua"}
+                                        />
+                                    </Link>
                                 </div>
                             </CarouselItem>
                         ))}

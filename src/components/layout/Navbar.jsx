@@ -8,6 +8,22 @@ export default function Navbar() {
     const packagesData = Object.entries(trips.paket);
     const isScrollablePage = location.pathname === '/' || location.pathname === '/Trip';
 
+    const handleAnchorClick = (e) => {
+        e.preventDefault(); // Mencegah navigasi instan
+        const targetId = e.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Aktifkan smooth scroll, lakukan scroll, lalu nonaktifkan lagi
+            document.documentElement.style.scrollBehavior = 'smooth';
+            targetElement.scrollIntoView();
+            // Reset setelah animasi selesai agar tidak memengaruhi navigasi lain
+            setTimeout(() => {
+                document.documentElement.style.scrollBehavior = 'auto';
+            }, 1000); // 1 detik
+        }
+    };
+
     return (
         <div className="sticky top-0 z-50 bg-white">
             <div className="flex justify-between items-center px-20 py-6 font-primary border-b border-gray-200">
@@ -19,8 +35,8 @@ export default function Navbar() {
 
                     {isScrollablePage ? (
                         <>
-                            <a href="#domestik" className="px-2 py-1 rounded-lg hover:bg-utama transition">Domestic</a>
-                            <a href="#internasional" className="px-2 py-1 rounded-lg hover:bg-utama transition">International</a>
+                            <a href="#domestik" onClick={handleAnchorClick} className="px-2 py-1 rounded-lg hover:bg-utama transition">Domestic</a>
+                            <a href="#internasional" onClick={handleAnchorClick} className="px-2 py-1 rounded-lg hover:bg-utama transition">International</a>
                         </>
                     ) : (
                         <>

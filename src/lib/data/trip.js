@@ -825,7 +825,7 @@ export const trips = {
             trip: [
                 {
                     id: 1,
-                    slug: "Honney Moon 2D 1N Grand Zuri Hotel",
+                    slug: "Honey Moon 2D 1N Grand Zuri Hotel",
                     images: [
                         Honeymoon1,
                         Honeymoon2,
@@ -904,7 +904,7 @@ export const trips = {
                 },
                 {
                     id: 2,
-                    slug: "Honney Moon 2D 1N Grand Zuri Hotel",
+                    slug: "Honey Moon 2D 1N Grand Zuri Hotel",
                     images: [
                         Honeymoon1,
                         Honeymoon2,
@@ -983,7 +983,7 @@ export const trips = {
                 },
                 {
                     id: 3,
-                    slug: "Honney Moon 2D 1N Grand Zuri Hotel",
+                    slug: "Honey Moon 2D 1N Grand Zuri Hotel",
                     images: [
                         Honeymoon1,
                         Honeymoon2,
@@ -1062,7 +1062,7 @@ export const trips = {
                 },
                 {
                     id: 4,
-                    slug: "Honney Moon 2D 1N Grand Zuri Hotel",
+                    slug: "Honey Moon 2D 1N Grand Zuri Hotel",
                     images: [
                         Honeymoon1,
                         Honeymoon2,
