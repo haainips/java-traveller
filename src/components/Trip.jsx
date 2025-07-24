@@ -3,7 +3,7 @@ import { Card, CardContent } from "./ui/card";
 import { trips } from "../lib/data/trip";
 import { MapPin } from "lucide-react";
 import { Button } from "./ui/button";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import CardCustom from "./CardCustom";
 
 export default function Trip() {
@@ -36,14 +36,14 @@ export default function Trip() {
     return (
         /* Trip Domestik & Internasional */
         <section className="py-10 font-primary bg-gray-50 w-full">
-            <span id="domestik" className="flex justify-center items-center gap-2 font-bold lg:text-3xl mb-4 scroll-mt-10">
+            <span id="domestik" className="flex justify-center items-center gap-2 font-bold lg:text-3xl mb-4 scroll-mt-0">
                 <h1 className="">Tujuan Populer di </h1>
                 <p className="text-utama">Java Traveller</p>
             </span>
             <p className=" text-center lg:text-xl font-medium">"Jelajahi dunia baru dengan pemandangan alam yang eksotis"</p>
 
             {/* Trip Domestik */}
-            <div className="flex flex-col items-center gap-6     mt-14">
+            <div className="flex flex-col items-center gap-6 mt-14">
                 <h1 className="text-utama text-center text-3xl font-bold">Domestic</h1>
                 <Carousel className="w-full lg:max-w-6xl mx-auto">
                     <CarouselContent className="-ml-5 ">
@@ -122,29 +122,31 @@ export default function Trip() {
                     <h1 className="text-utama">Java Traveller</h1>
                 </span>
                 <p className="lg:text-xl font-medium mb-10">“Pilih paket tour dengan harga murah disini.”</p>
-                <div className="flex lg:max-w-6xl mx-auto gap-10">
+                <div className="grid grid-cols-3 gap-4 lg:w-6xl">
                     {tripPackages.map(([tripPackageKey, tripPackageData]) => (
-                        <div key={tripPackageKey} className="relative w-full ">
-                            <Card className="py-0">
-                                <CardContent>
-                                    <img
-                                        src={tripPackageData.image}
-                                        alt={tripPackageKey}
-                                        className="w-full h-[400px] object-cover rounded-xl"
-                                    />
-                                </CardContent>
-                            </Card>
-                            <div className="absolute bottom-0 left-0 right-0 h-30 bg-black/70 rounded-b-xl flex flex-col py-3 px-4 text-white ">
-                                <h1 className="text-md font-medium">{packageNames[tripPackageKey] || tripPackageKey}</h1>
-                                <div className="flex justify-between items-center py-2">
-                                    <span className="text-white">
-                                        <h1 className="text-md font-normal mb-1">Harga mulai dari :</h1>
-                                        <p className="text-sm font-bold">Rp {tripPackageData.harga}</p>
-                                    </span>
-                                    <Button className="bg-utama text-black font-semibold lg:text-md px-3 py-1" >Lihat Paket</Button>
+                        <Link key={tripPackageKey} to={`/Trip/${tripPackageKey}`}>
+                            <div key={tripPackageKey} className="relative w-full ">
+                                <Card className="py-0 col-span-1">
+                                    <CardContent>
+                                        <img
+                                            src={tripPackageData.image}
+                                            alt={tripPackageKey}
+                                            className="w-full h-[400px] object-cover rounded-xl"
+                                        />
+                                    </CardContent>
+                                </Card>
+                                <div className="absolute bottom-0 left-0 right-0 h-30 bg-black/70 rounded-b-xl flex flex-col py-3 px-4 text-white ">
+                                    <h1 className="text-md font-medium">{packageNames[tripPackageKey] || tripPackageKey}</h1>
+                                    <div className="flex justify-between items-center py-2">
+                                        <span className="text-white">
+                                            <h1 className="text-md font-normal mb-1">Harga mulai dari :</h1>
+                                            <p className="text-sm font-bold">Rp {tripPackageData.harga}</p>
+                                        </span>
+                                        <Button className="bg-utama text-black font-semibold lg:text-md px-3 py-1" >Lihat Paket</Button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

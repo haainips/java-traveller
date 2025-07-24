@@ -8,7 +8,7 @@ import asitaBali from "../assets/asita-bali.png";
 
 function Home() {
     return (
-        <div className="scroll-smooth">
+        <div className="" >
             <Hero />
             <section className="space-y-12 py-18 font-primary ">
                 <div className="flex flex-col items-center gap-12 font-medium text-lg">

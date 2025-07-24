@@ -1,6 +1,6 @@
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 
 function Layout() {
     return (
@@ -10,6 +10,7 @@ function Layout() {
                 <Outlet />
             </main>
             <Footer />
+            <ScrollRestoration />
         </div>
     )
 }

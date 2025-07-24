@@ -5,7 +5,7 @@ import ImageSlider from "../../components/ImageSlider";
 import PaymentIcon from "../../assets/payment-icon.png";
 import FormReservation from "../../components/FormReservation";
 import Logo from "../../assets/Javatraveller-logo.png";
-import { Circle } from "lucide-react";
+import { ChevronRight, Circle } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 function DetailWisata() {
@@ -36,20 +36,33 @@ function DetailWisata() {
     }, []);
 
     if (!selectedTrip) {
-        return <div className="text-center py-10">Wisata tidak ditemukan.</div>;
+        return (
+            <div className="relative px-20 py-4 font-primary text-md">
+                <div className="flex items-center gap-2 font-medium mb-6">
+                    <Link to={"/"} className="hover:underline hover:text-blue-500 transition">Home</Link>
+                    <ChevronRight size={22}/>    
+                    <Link to={"/Trip"} className="hover:underline transition hover:text-blue-500">Trip</Link>
+                    <ChevronRight size={22}/>    
+                    <Link to={`/Trip/${type}/${region}`} className="hover:underline hover:text-blue-500 transition capitalize">{region}</Link>
+                </div>
+                <div className="text-center py-10 text-lg font-regular">
+                    Maaf Wisata tidak ditemukan.
+                </div>
+            </div>
+        )
     }
 
 
     return (
         <div className="relative px-20 py-4 font-primary">
             <div className="flex gap-2 font-medium mb-6">
-                <Link to={"/"} className="hover:underline transition">Home</Link>
-                <p>/</p>
-                <Link to={"/Trip"} className="hover:underline transition">Trip</Link>
-                <p>/</p>
-                <Link to={`/Trip/${type}/${region}`} className="hover:underline transition capitalize">{region}</Link>
-                <p>/</p>
-                <Link className="text-blue-500 underline">{slug}</Link>
+                <Link to={"/"} className="hover:underline hover:text-blue-700 transition">Home</Link>
+                <ChevronRight size={22} />  
+                <Link to={"/Trip"} className="hover:underline hover:text-blue-700 transition">Trip</Link>
+                <ChevronRight size={22} />  
+                <Link to={`/Trip/${type}/${region}`} className="hover:underline hover:text-blue-700 transition capitalize">{region}</Link>
+                <ChevronRight size={22} />  
+                <Link className="text-blue-600">{slug}</Link>
             </div>
 
             <div className="flex justify-between mb-4">
