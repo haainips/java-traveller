@@ -1,26 +1,26 @@
-import logo from "../../assets/Javatraveller-logo.png"
-import "../../App.css"
+import logo from "../../assets/Javatraveller-logo.png";
+import "../../App.css";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
-import { trips } from "../../lib/data/trip"
+import { trips } from "../../lib/data/trip";
+
 export default function Navbar() {
     const location = useLocation();
     const packagesData = Object.entries(trips.paket);
     const isScrollablePage = location.pathname === '/' || location.pathname === '/Trip';
 
     const handleAnchorClick = (e) => {
-        e.preventDefault(); // Mencegah navigasi instan
+        e.preventDefault();
         const targetId = e.currentTarget.getAttribute('href');
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
-            // Aktifkan smooth scroll, lakukan scroll, lalu nonaktifkan lagi
             document.documentElement.style.scrollBehavior = 'smooth';
-            targetElement.scrollIntoView();
-            // Reset setelah animasi selesai agar tidak memengaruhi navigasi lain
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            // Reset setelah animasi selesai
             setTimeout(() => {
                 document.documentElement.style.scrollBehavior = 'auto';
-            }, 1000); // 1 detik
+            }, 2000);
         }
     };
 
@@ -28,9 +28,11 @@ export default function Navbar() {
         <div className="sticky top-0 z-50 bg-white">
             <div className="flex justify-between items-center px-20 py-6 font-primary border-b border-gray-200">
                 <div className="w-60">
-                    <img src={logo} className="w-fit"></img>
+                    <img src={logo} className="w-fit" alt="Java Traveller Logo" />
                 </div>
-                <div className="flex lg:text-md lg:gap-2 font-semibold">
+                <div className="flex lg:text-md lg:gap-2 font-semibold items-center">
+
+                    {/* Bug Fix 1: Link "Home" disederhanakan */}
                     <Link to="/" className="px-2 py-1 rounded-lg hover:bg-utama transition">Home</Link>
 
                     {isScrollablePage ? (
@@ -51,19 +53,21 @@ export default function Navbar() {
                             <ChevronDown className="transition group-hover:rotate-180" />
                         </span>
 
-                        {/* Dropdown */}
-                        <div className="absolute hidden group-hover:block left-0 w-50 pt-1 z-50 ">
+                        <div className="absolute hidden group-hover:block left-0 w-50 pt-1 z-50">
                             <div className="h-1 pointer-events-none"></div>
-                            <div className="bg-white shadow-lg rounded-lg hover:rounded-lg flex flex-col pointer-events-auto border-2 border-gray-300">
-                                {packagesData.map(([packageKey, packageData]) => (
-                                    <Link key={packageKey} to={`/Trip/${packageKey}`} className="px-6 py-2 hover:bg-utama hover:rounded-md text-md capitalize">{packageData[packageKey] || packageKey}</Link>
+                            <div className="bg-white shadow-lg rounded-lg flex flex-col pointer-events-auto border-2 border-gray-300">
+                                {/* Bug Fix 2: Perbaikan logika mapping */}
+                                {packagesData.map(([packageKey]) => (
+                                    <Link key={packageKey} to={`/Trip/${packageKey}`} className="px-6 py-2 hover:bg-utama hover:rounded-md text-md capitalize">{packageKey}</Link>
                                 ))}
                             </div>
                         </div>
                     </div>
 
-                    <Link to="/Sewa-mobil" className="px-2 py-1 rounded-lg hover:bg-utama transition">Sewa Mobil</Link>
-                    <a href="#footer" className="px-2 py-1 rounded-lg hover:bg-utama transition">Hubungi Kami</a>
+                    <Link to="/sewa-mobil" className="px-2 py-1 rounded-lg hover:bg-utama transition">Sewa Mobil</Link>
+
+                    {/* Bug Fix 3: Menambahkan onClick handler */}
+                    <a href="#footer" onClick={handleAnchorClick} className="px-2 py-1 rounded-lg hover:bg-utama transition">Hubungi Kami</a>
                 </div>
             </div>
         </div>

@@ -19,6 +19,7 @@ import { format } from "date-fns"
 import { cn } from "@/lib/utils"
 import { forwardRef } from "react"
 import React from "react"
+import { useParams } from "react-router-dom"
 
 const formSchema = z.object({
     name: z.string().min(1, "Nama wajib diisi"),
@@ -29,6 +30,7 @@ const formSchema = z.object({
 })
 
 const ReservationForm = forwardRef(({ price }, ref) => {
+    const { slug } = useParams();
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -41,8 +43,26 @@ const ReservationForm = forwardRef(({ price }, ref) => {
     })
 
     const onSubmit = (values) => {
-        console.log("Data dikirim:", values)
-        alert('Reservasi berhasil dikirim!');
+        const phoneNumber = "6281809091929"
+        const formattedDate = format(values.date, "dd MMMM yyyy");
+
+        const message = `
+Halo, saya ingin melakukan reservasi wisata.
+Berikut adalah detailnya:
+
+Nama Paket: ${slug}
+Nama Pemesan: ${values.name}
+Email: ${values.email}
+No. WhatsApp: ${values.phone}
+Jumlah Orang: ${values.people}
+Tanggal Keberangkatan: ${formattedDate}
+
+Mohon konfirmasi ketersediaannya. Terima kasih.
+        `.trim();
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        // Arahkan pengguna ke URL WhatsApp di tab baru
+        window.open(whatsappUrl, '_blank');
     }
 
     return (

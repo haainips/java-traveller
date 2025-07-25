@@ -10,6 +10,7 @@ import SewaMobil from "./pages/SewaMobil";
 import TripHome from "./pages/Trip/Home"
 import Layout from "./components/Layout";
 import DetailWisata from "./pages/Trip/DetailWisata";
+import DetailSewaMobil from "./pages/DetailSewaMobil";
 
 const router = createBrowserRouter([
   {
@@ -41,17 +42,13 @@ const router = createBrowserRouter([
         element: <PackagesList />,
       },
       {
-        path: '/Trip/:type',
-        element: <PackagesList />,
-      },
-      {
-        path: '/Trip/:type',
-        element: <PackagesList />,
-      },
-      {
-        path: '/Sewa-mobil',
+        path: '/sewa-mobil',
         element: <SewaMobil />,
       },
+      {
+        path: '/sewa-mobil/:region',
+        element: <DetailSewaMobil />,
+      }
     ],
   },
 ]);

@@ -35,6 +35,21 @@ function DetailWisata() {
         };
     }, []);
 
+    const handleAnchorClick = (e) => {
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            document.documentElement.style.scrollBehavior = 'smooth';
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            // Reset setelah animasi selesai
+            setTimeout(() => {
+                document.documentElement.style.scrollBehavior = 'auto';
+            }, 2000);
+        }
+    };
+
     if (!selectedTrip) {
         return (
             <div className="relative px-20 py-4 font-primary text-md">
@@ -80,9 +95,9 @@ function DetailWisata() {
                         <h1 className="">{selectedTrip.pricetrip}/Orang</h1>
                     </span>
                     <span className="flex justify-between font-semibold text-lg border-b-1 border-gray-200 mb-6"></span>
-                    <Link to="" className="flex justify-center bg-utama text-md px-3 py-2 text-black font-semibold rounded-md hover:bg-black hover:text-utama transition">
+                    <a href="#form" onClick={handleAnchorClick} className="flex justify-center bg-utama text-md px-3 py-2 text-black font-semibold rounded-md hover:bg-black hover:text-utama transition">
                         Pesan Sekarang
-                    </Link>
+                    </a>
                 </div>
             </div>
 
@@ -137,12 +152,12 @@ function DetailWisata() {
                     </div>
                 </span>
 
-                <div ref={formRef} id="form" className="scroll-m-22">
+                <div ref={formRef} id="form" className="scroll-m-24">
                     <FormReservation price={selectedTrip.pricetrip} />
                 </div>
 
                 {!isFormVisible && (
-                    <a href="#form" className="fixed bottom-10 font-bold right-10 bg-utama text-black py-3 px-6 rounded-full shadow-2xl z-50 cursor-pointer transition hover:bg-black hover:text-utama">
+                    <a href="#form" onClick={handleAnchorClick} className="fixed bottom-10 font-bold right-10 bg-utama text-black py-3 px-6 rounded-full shadow-2xl z-50 cursor-pointer transition hover:bg-black hover:text-utama">
                         Pesan Sekarang
                     </a>
                 )}

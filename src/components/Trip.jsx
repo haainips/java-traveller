@@ -4,13 +4,15 @@ import { trips } from "../lib/data/trip";
 import { MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom"
+import { rental } from "../lib/data/rental"
 import CardCustom from "./CardCustom";
 
 export default function Trip() {
     const regions = Object.entries(trips.domestik);
     const internationalRegions = Object.entries(trips.internasional);
     const tripPackages = Object.entries(trips.paket);
-    const rentals = Object.entries(trips.rental);
+    const rentalMobil = Object.entries(rental);
+
 
     const interRegionNames = {
         asia: "Asia",
@@ -143,7 +145,7 @@ export default function Trip() {
                                             <h1 className="text-md font-normal mb-1">Harga mulai dari :</h1>
                                             <p className="text-sm font-bold">Rp {tripPackageData.harga}</p>
                                         </span>
-                                        <Button className="bg-utama text-black font-semibold lg:text-md px-3 py-1" >Lihat Paket</Button>
+                                        <Button className="bg-utama text-black hover:bg-black hover:text-utama hover:shadow-xl font-semibold lg:text-md px-3 py-1 transition duration-200" >Lihat Paket</Button>
                                     </div>
                                 </div>
                             </div>
@@ -152,29 +154,32 @@ export default function Trip() {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center gap-10 py-10 mt-20">
+            {/* Rental Mobil */}
+            <div id="rental" className="flex flex-col items-center gap-10 py-10 mt-20 scroll-mt-20">
                 <span className="space-y-4">
                     <h1 className="lg:text-3xl text-center font-bold font-primary text-utama">Pilihan Sewa Mobil</h1>
                     <p className="text-xl font-medium text-center">“Nikmati Perjalanan Dengan Nyaman”</p>
                 </span>
                 <Carousel className="w-full lg:max-w-6xl mx-auto">
                     <CarouselContent className="-ml-5">
-                        {rentals.map(([rentalKey, rentalData]) => (
+                        {rentalMobil.map(([rentalKey, rentalData]) => (
                             <CarouselItem key={rentalKey} className="pl-5 basis-1/3">
-                                <CardCustom classNames={
-                                    {
-                                        image: "h-full rounded-xl",
-                                        review: "hidden",
-                                        buttonOverlay: "bg-utama text-black px-8 font-semibold text-md py-2",
-                                        tittleOverlay: "font-medium text-xl",
+                            <Link key={rentalKey} to={`/sewa-mobil/${rentalKey}`}>
+                                    <CardCustom classNames={
+                                        {
+                                            image: "h-full rounded-xl",
+                                            review: "hidden",
+                                            buttonOverlay: "bg-utama text-black px-8 font-semibold text-sm py-2 hover:bg-black hover:text-utama transition",
+                                            tittleOverlay: "font-semibold text-xl",
+                                        }
                                     }
-                                }
-                                    image={rentalData.image}
-                                    titleOverlay={rentalData.text}
-                                    buttonOverlayLabel="Detail"
-                                    showOverlay={true}
-                                />
-                            </CarouselItem>
+                                        image={rentalData.image}
+                                        titleOverlay={rentalData.text}
+                                        buttonOverlayLabel="Detail"
+                                        showOverlay={true}
+                                    />
+                                    </Link>
+                                </CarouselItem>
                         ))}
                     </CarouselContent>
                     <CarouselPrevious />

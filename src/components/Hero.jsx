@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
     return (
         <section
+            id="home"
             className="relative w-full h-[600px] bg-cover bg-center flex items-center px-20 text-white"
             style={{
                 backgroundImage: `url(${landingPic})`,
