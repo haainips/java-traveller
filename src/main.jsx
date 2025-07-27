@@ -30,12 +30,12 @@ const router = createBrowserRouter([
         element: <DomestikListPage />,
       },
       {
-        path: '/Trip/Domestik/:region/:slug',
-        element: <DetailWisata />,
-      },
-      {
         path: '/Trip/Internasional/:region',
         element: <InternasionalListPage />,
+      },
+      {
+        path: '/Trip/:type/:region/:slug',
+        element: <DetailWisata />,
       },
       {
         path: '/Trip/:type',

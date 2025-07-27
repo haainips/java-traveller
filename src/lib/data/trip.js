@@ -65,6 +65,38 @@ import Honeymoon1 from "../../assets/paket/honeymoon/honeymoon1.png";
 import Honeymoon2 from "../../assets/paket/honeymoon/honeymoon2.jpeg";
 import Honeymoon3 from "../../assets/paket/honeymoon/honeymoon3.jpg";
 import Honeymoon4 from "../../assets/paket/honeymoon/honeymoon4.jpeg";
+import Indonesia from "../../assets/internasional/indonesia.jpeg";
+import Singapore from "../../assets/internasional/singapore.jpeg";
+import Thailand from "../../assets/internasional/thailand.jpeg";
+import Malaysia from "../../assets/internasional/malaysia.jpeg";
+import Jepang from "../../assets/internasional/jepang.jpeg";
+import JepangDetailTrip1 from "../../assets/internasional/jepang-detail1.jpg";
+import JepangDetailTrip2 from "../../assets/internasional/jepang-detail2.jpg";
+import JepangDetailTrip3 from "../../assets/internasional/jepang-detail3.jpg";
+import JepangDetailTrip4 from "../../assets/internasional/jepang-detail4.jpg";
+import JepangDetailTrip5 from "../../assets/internasional/jepang-detail5.jpg";
+import China from "../../assets/internasional/china.jpeg";
+import Italia from "../../assets/internasional/europe/italia.jpg";
+import France from "../../assets/internasional/europe/france.jpg";
+import Germany from "../../assets/internasional/europe/germany.jpg";
+import Turkey from "../../assets/internasional/europe/turkey.jpg";
+import Belanda from "../../assets/internasional/europe/belanda.jpg";
+import Belgium from "../../assets/internasional/europe/belgium.jpg";
+import Mesir from "../../assets/internasional/africa/mesir.jpg";
+import Libya from "../../assets/internasional/africa/libya.jpg";
+import Maroko from "../../assets/internasional/africa/moroco.jpg";
+import Sudan from "../../assets/internasional/africa/sudan.jpg";
+import Tunisia from "../../assets/internasional/africa/tunisia.jpg";
+import Queensland from "../../assets/internasional/australia/queensland.jpg";
+import Tasmania from "../../assets/internasional/australia/tasmania.png";
+import Victoria from "../../assets/internasional/australia/victoria.jpg";
+import WesternAustralia from "../../assets/internasional/australia/western-australia.png";
+import Wales from "../../assets/internasional/australia/wales.jpg";
+import Amerika from "../../assets/internasional/amerika/amerika-serikat.jpg";
+import Kanada from "../../assets/internasional/amerika/kanada.jpg";
+import Guatemala from "../../assets/internasional/amerika/guatemala.jpg";
+import ElSavador from "../../assets/internasional/amerika/el-savador.jpg";
+import Honduras from "../../assets/internasional/amerika/honduras.jpg";
 
 export const trips = {
     domestik: {
@@ -781,35 +813,414 @@ export const trips = {
             image: asia,
             description:
                 "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
-            trips: [{}],
+            trips: [
+                {
+                    id: 1,
+                    name: "Indonesia",
+                    images: [
+                        Indonesia,
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Bali-Yogyakarta-NTT-Jakarta",
+                },
+                {
+                    id: 2,
+                    name: "Singapore",
+                    images: [
+                        Singapore
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Bali-Yogyakarta-NTT-Jakarta",
+                },
+                {
+                    id: 3,
+                    name: "Thailand",
+                    images: [
+                        Thailand
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Chiang Mai - Bangkok - Phuket - Ko Samui",
+                },
+                {
+                    id: 4,
+                    name: "Malaysia",
+                    images: [
+                        Malaysia
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Kuala Lumpur - Johor Bahru - Kota Kinabalu - Malaka",
+                },
+                {
+                    id: 5,
+                    name: "Jepang",
+                    type: "",
+                    images: [
+                        Jepang,
+                        JepangDetailTrip1,
+                        JepangDetailTrip2,
+                        JepangDetailTrip3,
+                        JepangDetailTrip4,
+                        JepangDetailTrip5,
+                    ],
+                    topTitle: "",
+                    slug: "Jepang",
+                    duration: "",
+                    tripDestination:
+                        "Tokyo - Kyoto - Osaka - Hirosima",
+                    priceperday: "IDR 876K/2 Days",
+                    pricetrip: "Call For Price",
+                    ringkasan:
+                        "Jepang adalah sebuah negara kesatuan yang bersistem parlementer dengan berbentuk monarki konstitusional dan juga negara kepulauan di Asia Timur. Letaknya di ujung barat Samudra Pasifik, di sebelah timur Laut Jepang, dan bersebelahan dengan Tiongkok, Korea Selatan, dan Rusia.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                },
+                {
+                    id: 6,
+                    name: "China",
+                    images: [
+                        China
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Blue Moon Valley - Cresent Moon Lake - Dagu Glacier National Park",
+                },
+            ],
         },
         europe: {
             id: 2,
             image: europe,
             description:
                 "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
-            trips: [{}],
+            trips: [
+                {
+                    id: 1,
+                    name: "Italia",
+                    images: [
+                        Italia,
+                        JepangDetailTrip5,
+                        BelitungDetailTrip2,
+                        Belitung1,
+                        Italia,
+                        Italia
+                    ],
+                    tripDestination: "Rome - Florence - Venice - Cinque Terre",
+                    topTitle: "",
+                    slug: "Italia",
+                    duration: "",
+                    priceperday: "IDR 424K/2 Days",
+                    pricetrip: "Call For Price",
+                    ringkasan:
+                        "Italia, dengan nama resmi Republik Italia, adalah sebuah negara kesatuan republik parlementer di Eropa Terletak di jantung Laut Mediterania. Italia berbatasan dengan Prancis, Swiss, Austria, Slovenia, San Marino dan Vatikan.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "France",
+                    images: [
+                        France
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Paris - Nive - Montpellier",
+                },
+                {
+                    id: 3,
+                    name: "Germany",
+                    images: [
+                        Germany
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Berlin - Munich - Cologne",
+                },
+                {
+                    id: 4,
+                    name: "Turkey",
+                    images: [
+                        Turkey
+                    ],
+                    priceperday: "IDR 424K/2 Days",
+                    tripDestination: "Basilica Cistem - Hagia Sophia Grand Mosque - Blue Mosque",
+                },
+                {
+                    id: 5,
+                    name: "Belanda",
+                    type: "",
+                    images: [
+                        Belanda,
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Amsterdam - Rotterdam - Den Haag",
+                },
+                {
+                    id: 6,
+                    name: "Belgium",
+                    images: [
+                        Belgium
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Grand Place - Historic Centre of Brugge - Pairi Daiza",
+                },
+            ],
         },
         africa: {
             id: 3,
             image: africa,
             description:
                 "Rasakan keajaiban Pulau Dewata yang memadukan keindahan alam tropis, kearifan budaya Hindu yang mempesona, dan keramahan penduduk lokal yang tak terlupakan",
-            trips: [{}],
-        },
-        america: {
-            id: 4,
-            image: america,
-            description:
-                "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
-            trips: [{}],
+            trips: [
+                {
+                    id: 1,
+                    name: "Mesir",
+                    images: [
+                        Mesir,
+                        JepangDetailTrip5,
+                        BelitungDetailTrip2,
+                        Belitung1,
+                        Italia,
+                        Italia
+                    ],
+                    tripDestination: "Piramida Giza - Lembah Para Raja - Piramida Cheops",
+                    topTitle: "",
+                    slug: "Mesir",
+                    duration: "",
+                    priceperday: "IDR 424K/2 Days",
+                    pricetrip: "Call For Price",
+                    ringkasan:
+                        "Mesir, dengan nama resmi Republik Arab Mesir, adalah sebuah negara transbenua yang membentang dari timur laut Afrika sampai ke Semenanjung Sinai di Asia barat daya",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "Libya",
+                    images: [
+                        Libya
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Leptis Magna - Roman Sabratha - Ghandames City",
+                },
+                {
+                    id: 3,
+                    name: "Maroko",
+                    images: [
+                        Maroko
+                    ],
+                    priceperday: "IDR 1.511K/3 Days",
+                    tripDestination: "Jardin Marjorelle - Medina of Marrakesh - Bahia Palace",
+                },
+                {
+                    id: 4,
+                    name: "Sudan",
+                    images: [
+                        Sudan
+                    ],
+                    priceperday: "IDR 424K/Day",
+                    tripDestination: "Meroe Pyramids - Sudan National Museum - Gebel Barkal",
+                },
+                {
+                    id: 5,
+                    name: "Tunisia",
+                    type: "",
+                    images: [
+                        Tunisia,
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Hammoamet Beach - The National Bardo Museum - Yasmin Hammamet",
+                },
+            ],
         },
         australia: {
-            id: 5,
+            id: 4,
             image: australia,
             description:
                 "Bersiaplah terpesona dengan keindahan Raja Ampat-nya Kalimantan di Kepulauan Derawan, tempat penyu dan pari manta menari bebas di perairan kristal.",
-            trips: [{}],
+            trips: [
+                {
+                    id: 1,
+                    name: "Queensland",
+                    images: [
+                        Queensland,
+                        JepangDetailTrip5,
+                        BelitungDetailTrip2,
+                        Belitung1,
+                        Italia,
+                        Italia
+                    ],
+                    tripDestination: "Great Barrier Reef Snorkeling and Diving Cruise from Cairns - Passions of Paradise Great Barrier Reef Cruise by Catamaran",
+                    topTitle: "",
+                    slug: "Queensland",
+                    duration: "",
+                    priceperday: "IDR 424K/Day",
+                    pricetrip: "Call For Price",
+                    ringkasan:
+                        "Queensland yaitu negara bagian terbesar kedua di Australia setelah Australia Barat, dan menempati daerah timur laut di benua ini. Negara bagian ini berbatasan dengan Northern Territory di bagian barat, Australia Selatan di bagian barat daya dan New South Wales di bagian selatan.",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "Tasmania",
+                    images: [
+                        Tasmania
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Hastings Caves, Tahune Airwalk and the Huon Tasting Trail - Tamar Valley Wine Tour with Lunch",
+                },
+                {
+                    id: 3,
+                    name: "Victoria",
+                    images: [
+                        Victoria
+                    ],
+                    priceperday: "IDR 1.511K/3 Days",
+                    tripDestination: "Melbourne- Mornington Peninsula - Grampians - Great Ocean Road",
+                },
+                {
+                    id: 4,
+                    name: "Western Australia",
+                    images: [
+                        WesternAustralia
+                    ],
+                    priceperday: "IDR 424K/Day",
+                    tripDestination: "Pinnacles Desert Sunset Dinner and Stargazing Tour - Broome to Horizontal Falls Half Day Adventure",
+                },
+                {
+                    id: 5,
+                    name: "New South Wales",
+                    type: "",
+                    images: [
+                        Wales,
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Small All-Inclusive Blue Mountains, Scenic World, Lunch, Cruise - Whale Watching Boat Trip in SydneyHammoamet Beach - The National Bardo Museum - Yasmin Hammamet",
+                },
+            ],
+        },
+        america: {
+            id: 5,
+            image: america,
+            description:
+                "Temukan surga tersembunyi di ujung barat Indonesia - Sumatera menghadirkan kombinasi sempurna antara keindahan alam yang menakjubkan, kekayaan budaya yang autentik, dan kuliner legendaris yang akan memanjakan lidah.",
+            trips: [
+                {
+                    id: 1,
+                    name: "Amerika Serikat",
+                    images: [
+                        Amerika,
+                        JepangDetailTrip5,
+                        BelitungDetailTrip2,
+                        Belitung1,
+                        Italia,
+                        Italia
+                    ],
+                    tripDestination: "Red Rock Canyon National Conservation Area - National WWI Museum and Memorial",
+                    topTitle: "",
+                    slug: "Amerika Serikat",
+                    duration: "",
+                    priceperday: "IDR 424K/Day",
+                    pricetrip: "Call For Price",
+                    ringkasan:
+                        "Amerika Serikat, atau umumnya Amerika saja, adalah negara republik konstitusional federal yang terdiri dari lima puluh negara bagian dan sebuah distrik federal",
+                    include: [
+                        "Transportasi AC Privat",
+                        "2X Makan Siang",
+                        "Tiket Obyek Wisata",
+                        "Tour Guide + Driver",
+                        "Asuransi",
+                    ],
+                    exclude: [
+                        "Tiket Pesawat",
+                        "Akomodasi Hotel",
+                        "Tipping Guide",
+                        "Tour Tambahan",
+                        "Pengeluaran Pribadi",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "Kanada",
+                    images: [
+                        Kanada
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Vancouver - Banff - Niagara Falls",
+                },
+                {
+                    id: 3,
+                    name: "Guatemala",
+                    images: [
+                        Guatemala
+                    ],
+                    priceperday: "IDR 1.511K/3 Days",
+                    tripDestination: "Antigua - Lago de Atitlán - Chichicastenango",
+                },
+                {
+                    id: 4,
+                    name: "El Savador",
+                    images: [
+                        ElSavador
+                    ],
+                    priceperday: "IDR 424K/Day",
+                    tripDestination: "Santa Ana Volcano - Playa El Tunco - Lake Coatepeque",
+                },
+                {
+                    id: 5,
+                    name: "Honduras",
+                    type: "",
+                    images: [
+                        Honduras,
+                    ],
+                    priceperday: "IDR 876K/2 Days",
+                    tripDestination: "Little French Key - Dolphin Encounter - Cataratas Pulhapanzak",
+                },
+            ],
         },
     },
     paket: {

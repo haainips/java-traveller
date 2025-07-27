@@ -5,32 +5,53 @@ import ImageSlider from "../../components/ImageSlider";
 import PaymentIcon from "../../assets/payment-icon.png";
 import FormReservation from "../../components/FormReservation";
 import Logo from "../../assets/Javatraveller-logo.png";
-import { ChevronRight, Circle } from "lucide-react";
+import { ChevronRight, ChevronUp, Circle } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+import CardCustom from "../../components/CardCustom";
+import {
+    Carousel,
+    CarouselItem,
+    CarouselContent,
+    CarouselNext,
+    CarouselPrevious
+} from "../../components/ui/carousel";
+import WonderfulIndonesia from "../../assets/wonderful-indonesia.png";
+import AsitaBali from "../../assets/asita-bali.png";
 
 function DetailWisata() {
     const { slug, region, type } = useParams();
-    const allTrips = Object.values(trips.domestik).flatMap((region) => region.trips);
+    const allTrips = [
+        ...Object.values(trips.domestik).flatMap((region) => region.trips),
+        ...Object.values(trips.internasional).flatMap((region) => region.trips)
+    ];
     const selectedTrip = allTrips.find((trip) => trip.slug === slug);
-    const selectedRegion = trips.domestik[region];
     const formRef = useRef(null);
-    const [isFormVisible, setIsFormVisible] = useState(true);
+    const [showFloatingButton, setShowFloatingButton] = useState(false);
+
+    const safeType = type?.toLowerCase();
+    const otherTripsInRegion = trips[safeType]?.[region]?.trips.filter(
+        (trip) => trip.slug !== slug
+    ).slice(0, 4);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsFormVisible(entry.isIntersecting);
+                // Tampilkan tombol jika bagian ATAS form sudah terlewat dari layar
+                setShowFloatingButton(entry.boundingClientRect.top < 0);
             },
-            { threshold: 0.3 }
+            // Threshold [0, 1] memicu callback saat elemen mulai masuk/keluar
+            // dan saat elemen terlihat sepenuhnya. Ini membuat deteksi lebih akurat.
+            { threshold: [0, 1] }
         );
 
-        if (formRef.current) {
-            observer.observe(formRef.current);
+        const currentFormRef = formRef.current;
+        if (currentFormRef) {
+            observer.observe(currentFormRef);
         }
 
         return () => {
-            if (formRef.current) {
-                observer.unobserve(formRef.current);
+            if (currentFormRef) {
+                observer.unobserve(currentFormRef);
             }
         };
     }, []);
@@ -55,9 +76,9 @@ function DetailWisata() {
             <div className="relative px-20 py-4 font-primary text-md">
                 <div className="flex items-center gap-2 font-medium mb-6">
                     <Link to={"/"} className="hover:underline hover:text-blue-500 transition">Home</Link>
-                    <ChevronRight size={22}/>    
+                    <ChevronRight size={22} />
                     <Link to={"/Trip"} className="hover:underline transition hover:text-blue-500">Trip</Link>
-                    <ChevronRight size={22}/>    
+                    <ChevronRight size={22} />
                     <Link to={`/Trip/${type}/${region}`} className="hover:underline hover:text-blue-500 transition capitalize">{region}</Link>
                 </div>
                 <div className="text-center py-10 text-lg font-regular">
@@ -70,14 +91,15 @@ function DetailWisata() {
 
     return (
         <div className="relative px-20 py-4 font-primary">
-            <div className="flex gap-2 font-medium mb-6">
+            <div className="flex items-center gap-2 font-medium mb-6">
                 <Link to={"/"} className="hover:underline hover:text-blue-700 transition">Home</Link>
-                <ChevronRight size={22} />  
+                <ChevronRight size={22} />
                 <Link to={"/Trip"} className="hover:underline hover:text-blue-700 transition">Trip</Link>
-                <ChevronRight size={22} />  
+                <ChevronRight size={22} />
+                {/* 3. Gunakan 'type' untuk link breadcrumb yang dinamis */}
                 <Link to={`/Trip/${type}/${region}`} className="hover:underline hover:text-blue-700 transition capitalize">{region}</Link>
-                <ChevronRight size={22} />  
-                <Link className="text-blue-600">{slug}</Link>
+                <ChevronRight size={22} />
+                <span className="text-blue-600">{slug}</span>
             </div>
 
             <div className="flex justify-between mb-4">
@@ -87,7 +109,11 @@ function DetailWisata() {
                         <h1>{selectedTrip.slug}</h1>
                     </span>
                     <p className="mb-4 text-sm font-semibold">{selectedTrip.tripDestination}</p>
-                    <p className="mb-2 text-sm font-semibold">Durasi {selectedTrip.duration}</p>
+                    {selectedTrip.duration && (
+                        <p className="mb-2 text-sm font-semibold">
+                            Durasi {selectedTrip.duration}
+                        </p>
+                    )}
                 </div>
                 <div className="border-1 border-gray-300 rounded-2xl shadow-xl py-6 px-6 space-y-2">
                     <span className="flex justify-between gap-30 font-semibold text-lg ">
@@ -116,7 +142,7 @@ function DetailWisata() {
 
             {/* Ringkasan */}
             <div className="grid grid-cols-3 py-10 gap-6 space-y-8">
-                <span className="space-y-2 col-span-2">
+                <span className="flex flex-col justify-between space-y-2 col-span-2">
                     <h1 className="text-2xl font-bold"><li>Ringkasan</li></h1>
                     <p className=" font-medium text-justify mb-8">"{selectedTrip.ringkasan}"</p>
 
@@ -156,11 +182,16 @@ function DetailWisata() {
                     <FormReservation price={selectedTrip.pricetrip} />
                 </div>
 
-                {!isFormVisible && (
-                    <a href="#form" onClick={handleAnchorClick} className="fixed bottom-10 font-bold right-10 bg-utama text-black py-3 px-6 rounded-full shadow-2xl z-50 cursor-pointer transition hover:bg-black hover:text-utama">
-                        Pesan Sekarang
-                    </a>
-                )}
+                <a
+                    href="#form"
+                    onClick={handleAnchorClick}
+                    className={`
+        fixed bottom-10 right-10 z-50 cursor-pointer rounded-full bg-utama px-3 py-3 font-bold text-black shadow-2xl transition-all duration-400 ease-in-out hover:bg-black hover:text-utama
+        ${showFloatingButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}
+    `}
+                >
+                    <ChevronUp size={30} />
+                </a>
 
                 {selectedTrip.itenary && selectedTrip.itenary.length > 0 && (
                     <div className="gap-10 bg-[#F8F8F8] col-span-3 border border-gray-300 rounded-2xl shadow-sm py-10 px-10 space-y-6">
@@ -213,6 +244,62 @@ function DetailWisata() {
                         </ul>
                     </div>
                 )}
+            </div>
+
+            {/* Other Trip Recomendation */}
+            <div className="mt-16">
+                <h2 className="text-3xl font-bold text-center mb-8">
+                    Liburan Lainnya di <span className="capitalize text-utama">{region}</span>
+                </h2>
+
+                {otherTripsInRegion && otherTripsInRegion.length > 0 && (
+                    <Carousel
+                        opts={{
+                            align: "start",
+                            loop: true,
+                        }}
+                        className="w-full"
+                    >
+                        <CarouselContent className="-ml-4">
+                            {otherTripsInRegion.map((trip) => (
+                                // Setiap trip akan menjadi satu item di dalam carousel
+                                <CarouselItem key={trip.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                                    <div className="p-1">
+                                        <Link key={trip.id} to={`/Trip/${type}/${region}/${trip.slug}`}>
+                                            <CardCustom
+                                                classNames={{
+                                                    card: "drop-shadow-lg h-full", // Tambahkan h-full
+                                                    text: "py-2", // Tambahkan flex
+                                                    subtitle: "flex justify-between px-4 py-2",
+                                                    title: "font-semibold",
+                                                    category: "text-sm font-bold px-1 capitalize",
+                                                    image: "h-52 w-full object-cover",
+                                                    price: "text-md capitalize",
+                                                    description: "px-4 text-sm h-10 capitalize",
+                                                    footer: "flex justify-between px-4 py-4",
+                                                    buttonLabel: "text-sm px-3 py-2 text-black font-semibold rounded-md hover:bg-black hover:text-utama transition"
+                                                }}
+                                                image={trip.images[0]}
+                                                category={trip.type}
+                                                title={trip.name}
+                                                price={trip.priceperday}
+                                                description={trip.tripDestination}
+                                                buttonLabel="Lihat Detail"
+                                            />
+                                        </Link>
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                )}
+            </div>
+
+            <div className="flex gap-2 justify-center py-14 mb-4">
+                <img className="h-30" src={AsitaBali} />
+                <img className="h-30" src={WonderfulIndonesia} />
             </div>
         </div>
     );

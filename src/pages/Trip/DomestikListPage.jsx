@@ -70,7 +70,7 @@ function DomestikListPage() {
                 // 2. Jika ada, tampilkan grid kartu
                 <div className="grid grid-cols-3 gap-6">
                     {filteredTrips.map((trip) => (
-                        <Link key={trip.id} to={`/Trip/Domestik/${region}/${trip.slug}`}>
+                        <Link key={trip.id} to={`/Trip/domestik/${region}/${trip.slug}`}>
                             <CardCustom classNames={{
                                 card: "drop-shadow-lg",
                                 text: "py-2",

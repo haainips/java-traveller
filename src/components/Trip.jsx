@@ -89,7 +89,7 @@ export default function Trip() {
                         {internationalRegions.map(([interRegionKey, interRegionData]) => (
                             <CarouselItem key={interRegionKey} className="pl-5 basis-1/3">
                                 <div className="p-1">
-                                    <Link key={interRegionKey} to={`/Trip/Domestik/${interRegionKey}`}>
+                                    <Link key={interRegionKey} to={`/Trip/Internasional/${interRegionKey}`}>
                                         <CardCustom
                                             classNames={{
                                                 card: "",
