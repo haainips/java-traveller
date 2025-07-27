@@ -1,5 +1,6 @@
 import logo from "../../assets/Javatraveller-logo.png"
-import { MapPin, Mail, Phone, Clock8, Instagram, Facebook} from "lucide-react"
+import { MapPin, Mail, Phone, Clock8, Instagram, Facebook, Youtube } from "lucide-react"
+import Whatsapp from "../../assets/whatsapp.png"
 export default function Footer() {
     return (
         <div id="footer" className="flex flex-col items-center bg-kedua font-primary">
@@ -11,20 +12,24 @@ export default function Footer() {
 
                 <div className="py-2 space-y-2">
                     <h1 className="text-xl font-bold mb-5">Kantor Pusat</h1>
-                    <span className="flex items-center gap-4 lg:text-sm font-semibold">
-                        <MapPin size={20} fill="black" stroke="#FFA600" />
+                    <span className="flex items-center gap-4 lg:text-md font-semibold">
+                        <MapPin size={24} fill="black" stroke="#FFA600" />
                         <p>Ruko Gajahmada Square, Jl Juminahan <br/> No 26 H Yogyakarta 551112 Indonesia</p>
                     </span>
-                    <span className="flex items-center gap-4 lg:text-sm font-semibold">
-                        <Mail size={20}  />
+                    <span className="flex items-center gap-4 lg:text-md font-semibold">
+                        <Mail size={24} />
                         <p>booking@Javatraveller.com</p>
                     </span>
-                    <span className="flex items-center gap-4 lg:text-sm font-semibold">
-                        <Phone size={20} />
-                        <p>0284-550-777</p>
+                    <span className="flex items-center gap-4 lg:text-md font-semibold">
+                        <Phone size={24} />
+                        <p>0274-550-777</p>
                     </span>
-                    <span className="flex items-center gap-4 lg:text-sm font-semibold">
-                        <Clock8 size={20} />
+                    <span className="flex items-center gap-4 lg:text-md font-semibold">
+                        <img src={Whatsapp} className="w-6" />
+                        <p>0818-0909-1929</p>
+                    </span>
+                    <span className="flex items-center gap-4 lg:text-md font-semibold">
+                        <Clock8 size={24} />
                         <p>Buka Setiap Hari 08:00 - 21.00</p>
                     </span>
                 </div>
@@ -34,6 +39,7 @@ export default function Footer() {
                     <span className="flex gap-4">
                         <span className="rounded-full bg-gray-200/60 py-2 px-2"><Instagram size={24} /> </span>
                         <span className="rounded-full bg-gray-200/60 py-2 px-2"><Facebook size={24} /></span>
+                        <span className="rounded-full bg-gray-200/60 py-2 px-2"><Youtube size={24} /></span>
                     </span>
                 </div>
 
